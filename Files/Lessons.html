@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Lessons | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../Images/Logo.ico">
+  <link rel="stylesheet" href="Base.css">
+  <link rel="stylesheet" href="ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-base w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-base"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="..\index.html" class="w3-bar-item w3-button w3-hover-white"><i
+          class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-teal">Lessons</a>
+      <a href="About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="Contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="Privacy&Terms.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Privacy & Terms</a>
+      <div class="w3-bar-item w3-hide-medium w3-hide-large mobileheader">LESSONS</div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-base w3-hide w3-hide-large w3-hide-medium">
+      <a href="..\index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="#" class="w3-bar-item w3-button">Lessons</a>
+      <a href="About.html" class="w3-bar-item w3-button">About</a>
+      <a href="Contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="Privacy&Terms.html" class="w3-bar-item w3-button">Privacy & Terms</a>
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div class="w3-animate-bottom">
+
+    <!-- Header -->
+    <header class="w3-container w3-theme-lessonmenu w3-padding w3-card section0 header" id="myHeader">
+      <div class="w3-center">
+        <br>
+        <img class="w3-hide-small" src="..\Images\Icon2.png" alt="EZLOGIC Logo"
+          style="max-width:300px; height:auto;"><br class="w3-hide-small">
+        <img class="w3-hide-medium w3-hide-large" src="..\Images\Icon2.png" alt="EZLOGIC Logo"
+          style="max-width:250px; height:auto;"><br class="w3-hide-medium w3-hide-large">
+        <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>LESSONS PAGE</b></h1>
+        <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>LESSONS PAGE</b></h3>
+        <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>LESSONS PAGE</b></h3>
+      </div>
+    </header>
+
+    <!--Topic viewer-->
+    <div class="w3-container w3-theme-lessonmenu w3-padding w3-card section02">
+
+      <h2 class="w3-padding w3-center"><b>Available Topics</b></h2>
+      <div class="w3-container w3-padding">
+
+        <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align">
+          <b>Chapter 1: The Logic of Compound Statements</b></button>
+        <div id="Demo1" class="w3-theme-lesson2 w3-hide">
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left">&nbsp; 1. Logical Form and Logical Equivalence</p>
+              <div class="w3-right w3-padding">
+                <a href="./Topics/1-1.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz1').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left">&nbsp; <a class="w3-hover-grey" href="./Topics/1-1.html">1. Logical Form and Logical Equivalence</a></p>
+              <div class="w3-right w3-padding">
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz1').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-hover-grey" href="./Topics/1-1.html">1. Logical Form and Logical Equivalence</a><br>
+              <a class="w3-right w3-lime w3-hover-grey" onclick="document.getElementById('quiz1').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left">&nbsp; 2. Conditional Statements</p>
+              <div class="w3-right w3-padding">
+                <a href="./Topics/1-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz2').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left">&nbsp; <a class="w3-hover-grey" href="./Topics/1-2.html">2. Conditional Statements</a></p>
+              <div class="w3-right w3-padding">
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz2').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-hover-grey" href="./Topics/1-2.html">2. Conditional Statements</a><br>
+              <a class="w3-right w3-lime w3-hover-grey" onclick="document.getElementById('quiz2').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left">&nbsp; 3. Valid and Invalid Arguments</p>
+              <div class="w3-right w3-padding">
+                <a href="./Topics/1-3.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz3').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left">&nbsp; <a class="w3-hover-grey" href="./Topics/1-3.html">3. Valid and Invalid Arguments</a></p>
+              <div class="w3-right w3-padding">
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz3').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-hover-grey" href="./Topics/1-3.html">3. Valid and Invalid Arguments</a><br>
+              <a class="w3-right w3-lime w3-hover-grey" onclick="document.getElementById('quiz3').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+        </div>
+
+        <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align">
+          <b>Chapter 2: Application to Propositional Logic</b></button>
+        <div id="Demo2" class="w3-theme-lesson2 w3-hide">
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left">&nbsp; 1. Boolean Algebra Basics</p>
+              <div class="w3-right w3-padding">
+                <a href="./Topics/2-1.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz4').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left">&nbsp; <a class="w3-hover-grey" href="./Topics/2-1.html">1. Boolean Algebra Basics</a></p>
+              <div class="w3-right w3-padding">
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz4').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-hover-grey" href="./Topics/2-1.html">1. Boolean Algebra Basics</a><br>
+              <a class="w3-right w3-lime w3-hover-grey" onclick="document.getElementById('quiz4').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left">&nbsp; 2. Digital Circuits and Logic Gates</p>
+              <div class="w3-right w3-padding">
+                <a href="./Topics/2-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz5').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left">&nbsp; <a class="w3-hover-grey" href="./Topics/2-2.html">2. Digital Circuits and Logic Gates</a></p>
+              <div class="w3-right w3-padding">
+                <button class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz5').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-hover-grey" href="./Topics/2-2.html">2. Digital Circuits and Logic Gates</a><br>
+              <a class="w3-right w3-lime w3-hover-grey" onclick="document.getElementById('quiz5').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+        </div>
+
+        <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align">
+          <b>Chapter 3: The Logic of Quantified Statements (Coming soon)</b></button>
+        <div id="Demo3" class="w3-theme-lesson2 w3-hide">
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left w3-text-grey">&nbsp; 1. Predicates and Quantified Statements I</p>
+              <div class="w3-right w3-padding">
+                <a><button disabled class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left w3-text-grey">&nbsp; <a>1. Predicates and Quantified Statements I</a></p>
+              <div class="w3-right w3-padding">
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-text-grey">1. Predicates and Quantified Statements I</a><br>
+              <a class="w3-right w3-lime w3-text-grey" onclick="document.getElementById('quiz0').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+          
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left w3-text-grey">&nbsp; 2. Predicates and Quantified Statements II</p>
+              <div class="w3-right w3-padding">
+                <a><button disabled class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left w3-text-grey">&nbsp; <a>2. Predicates and Quantified Statements II</a></p>
+              <div class="w3-right w3-padding">
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-text-grey">2. Predicates and Quantified Statements II</a><br>
+              <a class="w3-right w3-lime w3-text-grey" onclick="document.getElementById('quiz0').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left w3-text-grey">&nbsp; 3. Statements with Multiple Quantifiers</p>
+              <div class="w3-right w3-padding">
+                <a><button disabled class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left w3-text-grey">&nbsp; <a>3. Statements with Multiple Quantifiers</a></p>
+              <div class="w3-right w3-padding">
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-text-grey">3. Statements with Multiple Quantifiers</a><br>
+              <a class="w3-right w3-lime w3-text-grey" onclick="document.getElementById('quiz0').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+          <div class="w3-container">
+            <!--Web-->
+            <div class="w3-hide-small w3-hide-medium">
+              <p class="w3-left w3-text-grey">&nbsp; 4. Arguments with Quantified Statements</p>
+              <div class="w3-right w3-padding">
+                <a><button disabled class="w3-btn w3-theme-base w3-hover-white w3-round-large"
+                    style="font-weight:500;"><b>View Lesson</b></button></a>
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile large-->
+            <div class="w3-hide-small w3-hide-large">
+              <p class="w3-left w3-text-grey">&nbsp; <a>4. Arguments with Quantified Statements</a></p>
+              <div class="w3-right w3-padding">
+                <button disabled class="w3-btn w3-theme-quizbutton w3-hover-white w3-round-large"
+                  onclick="document.getElementById('quiz0').style.display='block'" style="font-weight:500;"><b>Go To
+                    Quiz</b></button>
+              </div>
+            </div>
+            <!--Mobile small-->
+            <div class="w3-hide-medium w3-hide-large w3-row w3-padding">
+              <a class="w3-text-grey">4. Arguments with Quantified Statements</a><br>
+              <a class="w3-right w3-lime w3-text-grey" onclick="document.getElementById('quiz0').style.display='block'"
+                style="font-weight:500;"><b>&nbsp;Go To Quiz&nbsp;</b></a>
+            </div>
+          </div>
+
+        </div>
+        <br>
+        <p>Note: This site is still in development. More topics will be gradually added and will be opened soon.</p>
+        <p>Any suggestions for new topics or site improvements?
+          <a href="Contact.html" class="w3-hover-black w3-blue-gray">Click here</a> to place your feedback.
+          Your messgages will be highly appreciated.
+        </p>
+        <p>Want to request for one-on-one tutoring instead?
+          <a href="Contact.html#Tutorials" class="w3-hover-black w3-blue-gray">Click here</a> to learn more and
+          request for one.
+        </p>
+
+      </div>
+
+      <!--End animation scope-->
+    </div>
+
+    <!-- Modals for quiz taking: Quiz 1-5-->
+    <div id="quiz1" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz1').style.display='none'"
+            class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>1.1 Logical Form and Logical Equivalence</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./Topics/1-1Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+              style="font-weight:500;"><b>Take the Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <div id="quiz2" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz2').style.display='none'"
+            class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>1.2 Conditional Statements</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./Topics/1-2Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+              style="font-weight:500;"><b>Take the Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <div id="quiz3" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz3').style.display='none'"
+            class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>1.3 Valid and Invalid Arguments</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./Topics/1-3Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+              style="font-weight:500;"><b>Take the Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <div id="quiz4" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz4').style.display='none'"
+            class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>2.1 Boolean Algebra Basics</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./Topics/2-1Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+              style="font-weight:500;"><b>Take the Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <div id="quiz5" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz5').style.display='none'"
+            class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>2.2 Digital Circuits and Logic Gates</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./Topics/2-2Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+              style="font-weight:500;"><b>Take the Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:70px">
+      <h4>Follow Us on</h4>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i
+          class="fa fa-facebook"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+          class="fa fa-google-plus"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+          class="fa fa-instagram"></i></a>
+      <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+          class="fa fa-linkedin"></i></a>
+      <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+      <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+      <div class="w3-tooltip w3-right">
+        <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+        <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+      </div>
+    </footer>
+
+    <script>
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Accordions
+      function myAccFunc(id) {
+        var y = document.getElementById(id);
+        if (y.className.indexOf("w3-show") == -1) {
+          y.className += " w3-show";
+        } else {
+          y.className = y.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+
+</body>
+
+</html>

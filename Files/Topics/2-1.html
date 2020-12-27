@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>2.1 Boolean Algebra | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../Images/Logo.ico">
+  <link rel="stylesheet" href="../Base.css">
+  <link rel="stylesheet" href="../ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--For MathTex expressions-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    mjx-container[jax="CHTML"][display="true"] {
+      display: inline !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-base w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-base" href="javascript:void(0);"
+        onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white">
+        <i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Privacy & Terms</a>
+      <div class="w3-bar-item w3-hide-medium w3-hide-large mobileheader">TOPIC 2.1</div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-base w3-hide w3-hide-large w3-hide-medium">
+      <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button">Privacy & Terms</a>
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div class="w3-animate-bottom">
+
+    <!-- Header -->
+    <div class="section0 header">
+      <header class="w3-container w3-theme-lesson0 w3-padding w3-card content" id="myHeader">
+        <div class="w3-center">
+          <br>
+          <img class="w3-hide-small" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:300px; height:auto;"><br class="w3-hide-small">
+          <img class="w3-hide-medium w3-hide-large" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:250px; height:auto;"><br
+            class="w3-hide-medium w3-hide-large">
+          <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>TOPIC 2.1<br>Boolean Algebra Basics</b>
+          </h1>
+          <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>TOPIC 2.1<br>Boolean Algebra Basics</b>
+          </h3>
+          <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>2.1 Boolean Algebra Basics</b></h3>
+        </div>
+        <div class="w3-center w3-padding">
+          <a href="./1-3.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+          <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+              style="font-weight:500;">Topics</button></a>
+          <a href="./2-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                class="fa fa-angle-right"></i></button></a>
+        </div>
+      </header>
+    </div>
+
+    <!--Topic Proper-->
+    <div class="section02">
+      <div class="w3-theme-lesson0 w3-card content">
+        <br>
+        <!-- Learning objectives (left) and outline (with quick links) (right)-->
+        <div class="w3-container">
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Lesson Objectives</b></h2>
+              <ol>
+                <li>Know and perform the key operations involved in Boolean algebra.</li>
+                <li>Derive and familiarize various boolean identities.</li>
+                <li>Simplify boolean expressions using boolean identities.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Topic Outline</b></h2>
+              <ol>
+                <li><a href="#Topic1">Introduction</a></li>
+                <li><a href="#Topic2">Operations in Boolean Algebra</a></li>
+                <li><a href="#Topic3">Evaluating Boolean Functions</a></li>
+                <li><a href="#Topic4">Boolean Identities</a></li>
+                <li><a href="#Topic5">Simplifying Boolean Expressions</a></li>
+              </ol>
+              <div id="Topic1"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Lesson content-->
+        <div class="w3-container">
+          <div class="w3-padding">
+
+            <h2><b>Introduction</b></h2> <!--Topic 1-->
+            <p>
+              <b class="w3-text-lime">George Boole</b> is an English mathematician who helped establish modern
+              symbolic logic and whose algebra of logic, which is currently known as Boolean algebra. Specifically,
+              He found the <b class="w3-text-lime">link between logic and mathematics</b> which now helps prove
+              undiscovered relationships and in the field of electronics, simplify circuits and programs to
+              keep things running efficiently.
+            </p>
+            <br>
+            <img class="w3-hide-small" style="max-width:50%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/2-1a.png">
+            <img class="w3-hide-medium w3-hide-large" style="max-width:80%;position:relative;display:block;margin:auto;"
+              src="../../Images/Lessons/2-1a.png">
+            <p>
+              <b class="w3-text-lime">Boolean algebra</b> provides the operations and the rules for working with the
+              set <b class="w3-text-lime">{0, 1}</b>. Electronic and optical switches can be studied using this set
+              and the rules of Boolean algebra. Digital computers contain circuits that implement Boolean functions.
+              <b class="w3-text-lime">The simpler the Boolean function, the smaller the circuit.</b>
+              Simpler circuits yield the following benefits:
+              (1) They are cheaper to build, (2) consume less power and resources, and (3) run faster than complex
+              circuits.
+              The main way to do so is to <b class="w3-text-lime">reduce or simplify Boolean functions to their simplest
+                form</b>.
+            </p>
+
+            <br id="Topic2">
+            <h2><b>Operations in Boolean Algebra</b></h2> <!--Topic 2-->
+            <p>The three operations in Boolean algebra that we will use most are complementation, the Boolean sum, and
+              the Boolean product.
+            </p>
+            <div class="w3-padding w3-lime">
+              <ol>
+                <li>The <b>complement</b> of an element, denoted with a bar, is defined by </li>
+                <div class="w3-center">$$\overline{0}=1$$ and $$\overline{1}=0$$. </div><br>
+                <li>The <b>Boolean sum</b>, denoted by $$+$$ or by OR, has the following values:</li>
+                <div class="w3-center">$$1+1=1$$ , $$1+0=1$$ , $$0+1=1$$ , $$0+0=0$$ </div><br>
+                <li>The <b>Boolean product</b>, denoted by $$\cdot$$ or by AND, has the following values:</li>
+                <div class="w3-center">$$1·1=1$$ , $$1·0=0$$ , $$0·1=0$$ , $$0·0=0$$ </div>
+              </ol>
+            </div>
+            <p>
+              When there is no danger of confusion, the symbol $$·$$ can be deleted, just as in writing algebraic
+              products. Unless parentheses are used, the rules of precedence for Boolean operators are: First,
+              all complements are computed, followed by Boolean products, followed by all Boolean sums.
+            </p>
+            <!--Accordition: Example 1 -->
+            <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 1: </b>Find the value of $$1\cdot 0 + \overline{(0+1)}$$ .</button>
+            <div id="Demo1" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  $$1\cdot 0 + \overline{(0+1)}$$ <br>
+                  $$= 0 + \overline{1}$$ <br>
+                  $$= 0 + 0$$ <br>
+                  $$= 0$$
+                </p>
+              </div>
+            </div>
+            <br>
+            <p>
+              The complement, Boolean sum, and Boolean product correspond to the <b class="w3-text-lime">logical operators</b>,
+              $$\sim$$, $$\vee$$, and $$\wedge$$, respectively, where 0 corresponds to F (false) and 1 corresponds to T
+              (true). Equalities in Boolean algebra can be directly translated into equivalences of compound
+              propositions. Conversely, equivalences of compound propositions can be translated into equalities in
+              Boolean algebra.
+            </p>
+            <!--Accordition: Example 2 -->
+            <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 2: </b>Answer the following: <br>
+              (1) Translate the equality $$1\cdot 0 + \overline{(0+1)}$$ into a propositional equivalence. <br>
+              (2) Translate the logical equivalence $$(T \wedge T ) \vee \sim F \equiv T$$ into an equality in Boolean algebra.
+            </button>
+            <div id="Demo2" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) $$(T \wedge F) \vee \sim(T \vee F) \equiv F$$ <br>
+                  (2) $$( 1 \cdot 1 ) + \overline{0} = 1$$
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic3">
+            <h2><b>Evaluating Boolean Functions</b></h2> <!--Topic 3-->
+            <p>
+              Definition: Let $$B = \left\{0,1\right\}$$. Then <br>
+            <div class="w3-center">$$b_{n}=\left\{(x_{1},x_{2},...,x_{n}):x_{i}\in B\text{ for }1\le i \le n\right\}$$</div><br>
+            is the set of all possible n-tuples of 0's and 1's.
+            The variable x is called a Boolean variable if it assumes values only from B. A function from $$B^{n}$$ to B is called a
+            <b class="w3-text-lime">Boolean function</b> of degree n.
+            </p>
+            <p>
+              For instance, The function $$F(x, y) = x\overline{y}$$ from the set of ordered
+              pairs of Boolean variables to the set $$\left\{0,1\right\}$$ is a Boolean function of
+              degree 2 with the following values: <br>
+            <div class="w3-center">
+              $$F(1, 1) = 1 \cdot \overline{1} = 1 \cdot 0 = 0$$ <br>
+              $$F(1, 0) = 1 \cdot \overline{0} = 1 \cdot 1 = 1$$ <br>
+              $$F(0, 1) = 0 \cdot \overline{1} = 0 \cdot 0 = 0$$ <br>
+              $$F(0, 0) = 0 \cdot \overline{0} = 0 \cdot 1 = 0$$
+            </div>
+            </p>
+
+            <!--Accordition: Example 3 -->
+            <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 3: </b>Find the values of the Boolean function represented by $$F(x,y,z) = xy + \overline{z}$$ .</button>
+            <div id="Demo3" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;" src="../../Images/Lessons/2-1b.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;"
+                    src="../../Images/Lessons/2-1b.png">
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic4">
+            <h2><b>Boolean Identities</b></h2> <!--Topic 4-->
+            <p>
+              The following summarizes the important <b class="w3-text-lime">Boolean identities</b> that can be applied in simplifying boolean
+              expressions.
+              These identities are particularly useful in simplifying the design of circuits later on.</p>
+
+            <div class="w3-center w3-lime w3-row w3-padding">
+              <img class="w3-hide-small w3-hide-medium w3-padding-16" style="max-width:50%;position:relative;display:block;margin:auto;"
+                src="../../Images/Lessons/2-1c.png">
+              <img class="w3-hide-small w3-hide-large w3-padding-16" style="max-width:70%;position:relative;display:block;margin:auto;"
+                src="../../Images/Lessons/2-1c.png">
+              <img class="w3-hide-medium w3-hide-large w3-padding-16" style="max-width:90%;position:relative;display:block;margin:auto;"
+                src="../../Images/Lessons/2-1c.png">
+            </div>
+
+            <br>
+            <!--Accordition: Example 4 -->
+            <button onclick="myAccFunc('Demo4')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 4: </b>Verify the validity of the distributive law: $$x(y+z)=(x+y)(x+z)$$</button>
+            <div id="Demo4" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;" src="../../Images/Lessons/2-1d.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;"
+                    src="../../Images/Lessons/2-1d.png"> <br>
+                    Since the truth values of $$x(y+z)$$ and $$(x+y)(x+z)$$ are equal for all input combinations, it can be concluded
+                    that the equality above is valid.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic5">
+            <h2><b>Simplifying Boolean Expressions</b></h2> <!--Topic 5-->
+            <p>Identities in Boolean algebra can be used to <b class="w3-text-lime">prove further identities</b>. Also, it can be used to
+              <b class="w3-text-lime">manipulate or reduce the complexity of boolean expressions</b> to simplify their equivalent logic circuits.
+            </p>
+            <p>
+              Study the following examples below.
+            </p>
+
+            <!--Accordition: Example 5 -->
+            <button onclick="myAccFunc('Demo5')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 5: </b>Prove the absorption law $$x(x + y) = x$$ using the other identities of Boolean algebra.</button>
+            <div id="Demo5" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  $$x (x + y)$$<br>
+                  $$= (x + 0)(x + y)$$ &nbsp; - Identity law for Boolean sum<br>
+                  $$= x + 0 \cdot y$$ &nbsp; - Distributive law of Boolean sum over Boolean product<br>
+                  $$= x + y \cdot 0$$ &nbsp; - Commutative law for Boolean product<br>
+                  $$= x + 0$$ &nbsp; - Domination law for Boolean product<br>
+                  $$= x$$ &nbsp; - Identity law for Boolean sum
+                </p>
+              </div>
+            </div>
+            <br>
+            <!--Accordition: Example 6-->
+            <button onclick="myAccFunc('Demo6')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 6: </b>Simplify the boolean expression $$\overline{(\overline{a} \cdot b)} \cdot (a + b)$$.</button>
+            <div id="Demo6" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  $$\overline{(\overline{a} \cdot b)} \cdot (a + b)$$ <br>
+                  $$= (\overline{\overline{a}} + \overline{b}) \cdot (a + b)$$ &nbsp; - De Morgan's law<br>
+                  $$= (a + \overline{b}) \cdot (a + b)$$ &nbsp; - Double complement law <br>
+                  $$= a + (b \cdot \overline{b})$$ &nbsp; - Distributive law of Boolean sum over Boolean product<br>
+                  $$= a + 0$$ &nbsp; - Zero property of Boolean product <br>
+                  $$= a$$ &nbsp; - Identity law of Boolean sum <br> <br>
+                  Therefore, $$\overline{(\overline{a} \cdot b)} \cdot (a + b)$$ can be reduced to $$a$$.
+                </p>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="w3-center">
+              <button class="w3-btn w3-large w3-theme-quizbutton w3-hover-white w3-round-large w3-centered w3-card"
+                onclick="document.getElementById('quiz1').style.display='block'" style="font-weight:500;"><b>Go To
+                  Quiz</b></button>
+              <br><br>
+              <a href="./1-3.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                    class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+              <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+                  style="font-weight:500;">Topics</button></a>
+              <a href="./2-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                    class="fa fa-angle-right"></i></button></a>
+              <br><br>
+              <p>Questions or clarifications on this topic?
+                <a href="../Contact.html" class="w3-hover-black w3-blue-gray">Click here</a> to place your feedback.
+                Your messgages will be highly appreciated.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--End animation scope-->
+    </div>
+
+    <!-- Modal for quiz taking: Quiz 1-->
+    <div id="quiz1" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz1').style.display='none'" class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>2.1 Boolean Algebra Basics</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./2-1Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large" style="font-weight:500;"><b>Take the
+                Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:70px">
+      <h4>Follow Us on</h4>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+      <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+      <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+      <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+      <div class="w3-tooltip w3-right">
+        <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+        <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+      </div>
+    </footer>
+
+    <script>
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Accordions
+      function myAccFunc(id) {
+        var y = document.getElementById(id);
+        if (y.className.indexOf("w3-show") == -1) {
+          y.className += " w3-show";
+        } else {
+          y.className = y.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+
+</body>
+
+</html>

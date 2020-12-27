@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>QUIZ 2.1 Boolean Algebra Basics | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../Images/Logo.ico">
+  <link rel="stylesheet" href="../Base.css">
+  <link rel="stylesheet" href="../ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--For MathTex expressions-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    mjx-container[jax="CHTML"][display="true"] {
+      display: inline !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-base w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-base"
+        href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white">
+        <i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Privacy & Terms</a>
+      <div class="w3-bar-item w3-hide-medium w3-hide-large mobileheader">QUIZ 2.1</div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-base w3-hide w3-hide-large w3-hide-medium">
+      <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button">Privacy & Terms</a>
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div id="animate" class="w3-animate-bottom">
+
+    <!-- Header -->
+    <div class="section0 header">
+      <header class="w3-container w3-theme-quiz0 w3-padding w3-card content" id="myHeader">
+        <div class="w3-center">
+          <br>
+          <img class="w3-hide-small" src="../../Images/Icon2.png" alt="EZLOGIC Logo"
+            style="max-width:300px; height:auto;"><br class="w3-hide-small">
+          <img class="w3-hide-medium w3-hide-large" src="../../Images/Icon2.png" alt="EZLOGIC Logo"
+            style="max-width:250px; height:auto;"><br class="w3-hide-medium w3-hide-large">
+          <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>QUIZ 2.1:<br>Boolean Algebra Basics</b>
+          </h1>
+          <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>QUIZ 2.1:<br>Boolean Algebra Basics</b>
+          </h3>
+          <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>QUIZ 2.1 Boolean Algebra Basics</b></h3>
+        </div>
+        <div class="w3-center w3-padding">
+          <p id="header0"><b>Instruction: Read each item carefully and select the best answers.
+              Hit the submit button once you are done.</b></p>
+          <p id="header1" style="font-weight:bold"></p>
+        </div>
+      </header>
+    </div>
+
+    <!--Quiz Proper-->
+    <div class="section02">
+      <div class="w3-theme-quiz0 w3-card content">
+        <form class="quiz">
+          <fieldset id="quiz0">
+
+            <!-- Question 1 -->
+            <br>
+            <div class="w3-container">
+              <div id="A1" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">1</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      The output of the expression $$(x+y+z)(\bar{x}\cdot\bar{y}\cdot\bar{z})$$ for all input
+                      combinations is</b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1" value="A">
+                    <div class="optionlabel"> Always true</div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1" value="B">
+                    <div class="optionlabel"> Mostly true </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1" value="C">
+                    <div class="optionlabel"> Mostly false </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1Corr" value="D">
+                    <div class="optionlabel"> Always false </div>
+                  </label>
+                </div>
+                <p id="B1"></p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <br>
+            <div class="w3-container">
+              <div id="A2" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">2</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      Given the following boolean statements, determine the incorrect statement below. <ol type="A">
+                        <li>$$x+x=x$$</li>
+                        <li>$$x+1=1$$</li>
+                        <li>$$x\cdot y=y\cdot x$$</li>
+                        <li>$$x+\overline{x}=1$$</li></ol>
+                    </b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2" value="A">
+                    <div class="optionlabel"> A demonstrates Idempotent Law </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2" value="B">
+                    <div class="optionlabel"> B demonstrates Domination Law </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2" value="C">
+                    <div class="optionlabel"> C demonstrates Commutative Law </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2Corr" value="D">
+                    <div class="optionlabel"> D demonstrates Identity Law </div>
+                  </label>
+                </div>
+                <p id="B2"></p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <br>
+            <div class="w3-container">
+              <div id="A3" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">3</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">Which of the following is false?</b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3" value="A">
+                    <div class="optionlabel"> $$\overline{(m+n)}=\overline{m}\cdot \overline{n}$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3Corr" value="B">
+                    <div class="optionlabel"> $$x(y+z)=(x+y)(x+z)$$ </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3" value="C">
+                    <div class="optionlabel"> $$c(defgh)=h(efg)(cd)$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3" value="D">
+                    <div class="optionlabel"> $$A+(\overline{A}B)=A+B$$ </div>
+                  </label>
+                </div>
+                <p id="B3"></p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <br>
+            <div class="w3-container">
+              <div id="A4" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">4</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">Which of the following boolean equations has no solution?</b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4" value="A">
+                    <div class="optionlabel"> $$x\cdot 1 = 0$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4" value="B">
+                    <div class="optionlabel"> $$x + x = 0$$ </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4" value="C">
+                    <div class="optionlabel"> $$1 \cdot x = x$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4Corr" value="D">
+                    <div class="optionlabel"> $$x \cdot \overline{x} = 1$$ </div>
+                  </label>
+                </div>
+                <p id="B4"></p>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <br>
+            <div class="w3-container">
+              <div id="A5" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">5</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      Given $$F(x,y,z)=x\overline{y}+\overline{xyz}$$. Which of the following input combination
+                      evaluates 0?
+                    </b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5" value="A">
+                    <div class="optionlabel"> $$F(0,0,0)$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5" value="B">
+                    <div class="optionlabel"> $$F(1,0,1)$$ </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5" value="C">
+                    <div class="optionlabel"> $$F(0,1,0)$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5Corr" value="D">
+                    <div class="optionlabel"> $$F(1,1,1)$$ </div>
+                  </label>
+                </div>
+                <p id="B5"></p>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <br>
+            <div class="w3-container">
+              <div id="A6" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">6</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">Which of the following is incorrect?</b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6" value="A">
+                    <div class="optionlabel"> $$1\cdot \overline{0} = 1$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6" value="B">
+                    <div class="optionlabel"> $$1+ \overline{1} = 1$$ </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6" value="C">
+                    <div class="optionlabel"> $$\overline{0} \cdot 0 = 0$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6Corr" value="D">
+                    <div class="optionlabel"> $$\overline{(1+0)} = 1$$ </div>
+                  </label>
+                </div>
+                <p id="B6"></p>
+              </div>
+            </div>
+
+            <!-- Question 7 -->
+            <br>
+            <div class="w3-container">
+              <div id="A7" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">7</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      The boolean operator $$\oplus$$ behaves the same way as a logical Exclusive OR (XOR) operator.
+                      Which of the following always evaluates to $$\overline{x}$$ for all values of $$x$$?
+                    </b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7" value="A">
+                    <div class="optionlabel"> $$0\oplus x$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7" value="B">
+                    <div class="optionlabel"> $$x\oplus x$$ </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7Corr" value="C">
+                    <div class="optionlabel"> $$x\oplus 1$$ </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7" value="D">
+                    <div class="optionlabel"> $$\overline{x}\oplus x$$ </div>
+                  </label>
+                </div>
+                <p id="B7"></p>
+              </div>
+            </div>
+
+            <!-- Question 8 -->
+            <br>
+            <div class="w3-container">
+              <div id="A8" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">8</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      The simplified form of the boolean expression ABD+CD+ACD+ABC+ABCD is:
+                    </b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8Corr" value="A">
+                    <div class="optionlabel"> AB(C+D)+CD </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8" value="B">
+                    <div class="optionlabel"> CD(A+B)+AB </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8" value="C">
+                    <div class="optionlabel"> C(A+B+D)+CD </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8" value="D">
+                    <div class="optionlabel"> D(AB+C+AC+AB+ABC) </div>
+                  </label>
+                </div>
+                <p id="B8"></p>
+              </div>
+            </div>
+
+            <!-- Question 9 -->
+            <br>
+            <div class="w3-container">
+              <div id="A9" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">9</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      The statement $$AC+ABC=AC$$ holds true by the ______ law.
+                    </b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <div class="paddingtopbottom">
+                    <input class="w3-input w3-hover-grey" type="text" name="Q9" id="Q9" value=""
+                      placeholder="Enter answer here...">
+                  </div>
+                </div>
+                <p id="B9"></p>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <br>
+            <div class="w3-container">
+              <div id="A10" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">10</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">Evaluate the expression $$(\bar{1}\cdot\bar{0})+(\overline{1\cdot0}+0)$$ .</b>
+                  </div>
+                </div>
+                <div class="w3-row">
+                  <div class="paddingtopbottom">
+                    <input class="w3-input w3-hover-grey" type="text" name="Q10" id="Q10" value=""
+                      placeholder="Enter answer here...">
+                  </div>
+                </div>
+                <p id="B10"></p>
+              </div>
+            </div>
+
+          </fieldset>
+          <br>
+          <br>
+          <div class="w3-center w3-padding">
+            <a href="./2-1.html"><button type="button"
+                class="w3-btn w3-theme-lesson0 w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                  class="fa fa-angle-left"></i>&nbsp; Back to Lesson</button></a>
+            <button id="check" type="button"
+              class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-centered w3-card"
+              onclick="document.getElementById('pass').style.display='block'" style="font-weight:500;">
+              <b>Submit Quiz</b></button>
+            <br>
+            <br>
+            <p id="footer" style="display:none"><b>To retake the quiz, kindly refresh this page.</b></p>
+            <br>
+          </div>
+
+          <!-- Modal for quiz submission-->
+          <div id="pass" class="w3-modal" style="display: none;">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+              <header class="w3-container w3-theme-quiz0">
+                <span onclick="document.getElementById('pass').style.display='none'"
+                  class="w3-button w3-display-topright">X</span>
+                <h4><b>Proceed to submit?</b></h4>
+              </header>
+              <div class="w3-padding w3-center w3-text-black">
+                <p>You are about to submit your answers for this quiz.</p>
+                <p>To confirm your submission, click the button below.</p>
+                <a href="#"><button type="button" class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+                    onclick="document.getElementById('pass').style.display='none',checkQuiz()" style="font-weight:500;">
+                    <b>Proceed</b></button></a>
+              </div>
+              <footer class="w3-container w3-theme-quiz0">
+                <p class="w3-right">- EZ Tutorial Team</p>
+              </footer>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!--End animation scope-->
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:60px">
+    <h4>Follow Us on</h4>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i
+        class="fa fa-google-plus"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+        class="fa fa-linkedin"></i></a>
+    <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+    <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+    <div class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>
+
+  <script>
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // Check the quiz
+    function checkQuiz(QuizNum) {
+      // Read-only all fields
+      // Check every answer is it matches the correct answer
+      // If correct, make bg color green, show "correct", add 1 point
+      // If wrong, make bg color red, show "Correct answer:__", no points
+      // Show answer explanation if needed
+      // Replace "header" id with score and corresponding comment display: (score)/10
+
+      document.getElementById("animate").className = "w3-animate-opacity";
+      document.getElementById("quiz0").disabled = true;
+      document.getElementById("check").style.display = "none";
+
+      // Correct answers:
+      var corrAns = ["Always false", "D demonstrates Identity Law", "x(y+z)=(x+y)(x+z)", "x∙x&#773;=1", "F(1,1,1)", '<span style="text-decoration:overline">(1+0)</span>=1', "x &oplus; 1", "AB(C+D)+CD"];
+      // Acceptable answers for Q9:
+      var Ans9 = ["Absorption", "absorption"];
+      //Acceptable answers for Q10:
+      var Ans10 = ["1"];
+      var score = 0;
+      var itemnum;
+      var ndx;
+
+      for (itemnum = 1; itemnum <= 8; itemnum++) {
+        if (document.getElementById('Q' + itemnum + 'Corr').checked) {
+          document.getElementById("A" + itemnum).style.backgroundColor = "#B1D69A";
+          score++;
+          document.getElementById("B" + itemnum).innerHTML = "Correct! Well done!";
+        } else {
+          document.getElementById("A" + itemnum).style.backgroundColor = "#F6BA92";
+          document.getElementById("B" + itemnum).innerHTML = "Correct answer: " + corrAns[itemnum - 1];
+        }
+        document.getElementById("B" + itemnum).style.backgroundColor = "#FFFFFF";
+        document.getElementById("B" + itemnum).style.color = "#000000";
+        document.getElementById("B" + itemnum).className = "w3-padding";
+      }
+
+      itemnum = 9;
+      for (ndx = 0; ndx < Ans9.length && document.getElementById("Q9").value != Ans9[ndx]; ndx++) { }
+
+      if (ndx < Ans9.length) {
+        document.getElementById("A" + itemnum).style.backgroundColor = "#B1D69A";
+        score++;
+        document.getElementById("B" + itemnum).innerHTML = "Correct! Well done!";
+      } else {
+        document.getElementById("A" + itemnum).style.backgroundColor = "#F6BA92";
+        document.getElementById("B" + itemnum).innerHTML = "Correct answer: " + Ans9[0];
+      }
+
+      itemnum = 10;
+      for (ndx = 0; ndx < Ans10.length && document.getElementById("Q10").value != Ans10[ndx]; ndx++) { }
+
+      if (ndx < Ans10.length) {
+        document.getElementById("A" + itemnum).style.backgroundColor = "#B1D69A";
+        score++;
+        document.getElementById("B" + itemnum).innerHTML = "Correct! Well done!";
+      } else {
+        document.getElementById("A" + itemnum).style.backgroundColor = "#F6BA92";
+        document.getElementById("B" + itemnum).innerHTML = "Correct answer: " + Ans10[0];
+      }
+
+      for (itemnum = 9; itemnum <= 10; itemnum++) {
+        document.getElementById("B" + itemnum).style.backgroundColor = "#FFFFFF";
+        document.getElementById("B" + itemnum).style.color = "#000000";
+        document.getElementById("B" + itemnum).className = "w3-padding";
+      }
+
+      document.getElementById("header0").style.display = "none";
+      document.getElementById("header1").style.backgroundColor = "#FFFFFF";
+      document.getElementById("header1").style.color = "#000000";
+      document.getElementById("header1").className = "w3-padding quiz";
+      document.getElementById("footer").style.display = "block";
+
+      switch (score) {
+        case 0:
+        case 1:
+        case 2:
+          document.getElementById("header1").innerHTML = "Score: " + score + " out of 10 <br> You can do better than this. Kindly read through the lesson again in detail.";
+          break;
+        case 3:
+        case 4:
+        case 5:
+          document.getElementById("header1").innerHTML = "Score: " + score + " out of 10 <br> Not yet there... Try to study the lesson again and go over what you have misunderstood.";
+          break;
+        case 6:
+        case 7:
+          document.getElementById("header1").innerHTML = "Score: " + score + " out of 10 <br> Good! You have passed this quiz, but try to review your incorrectly answered questions.";
+          break;
+        case 8:
+        case 9:
+          document.getElementById("header1").innerHTML = "Score: " + score + " out of 10 <br> Great! You have almost mastered the lesson!";
+          break;
+        case 10:
+          document.getElementById("header1").innerHTML = "Score: " + score + " out of 10 <br> Congratulations! You have mastered the lesson!";
+          break;
+      }
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>1.2 Conditional Statements | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../Images/Logo.ico">
+  <link rel="stylesheet" href="../Base.css">
+  <link rel="stylesheet" href="../ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--For MathTex expressions-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    mjx-container[jax="CHTML"][display="true"] {
+      display: inline !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-base w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-base" href="javascript:void(0);"
+        onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white">
+        <i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Privacy & Terms</a>
+      <div class="w3-bar-item w3-hide-medium w3-hide-large mobileheader">TOPIC 1.2</div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-base w3-hide w3-hide-large w3-hide-medium">
+      <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button">Privacy & Terms</a>
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div class="w3-animate-bottom">
+
+    <!-- Header -->
+    <div class="section0 header">
+      <header class="w3-container w3-theme-lesson0 w3-padding w3-card content" id="myHeader">
+        <div class="w3-center">
+          <br>
+          <img class="w3-hide-small" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:300px; height:auto;"><br class="w3-hide-small">
+          <img class="w3-hide-medium w3-hide-large" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:250px; height:auto;"><br
+            class="w3-hide-medium w3-hide-large">
+          <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>TOPIC 1.2<br>Conditional Statements</b>
+          </h1>
+          <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>TOPIC 1.2<br>Conditional Statements</b>
+          </h3>
+          <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>1.2 Conditional Statements</b></h3>
+        </div>
+        <div class="w3-center w3-padding">
+          <a href="./1-1.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+          <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+              style="font-weight:500;">Topics</button></a>
+          <a href="./1-3.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                class="fa fa-angle-right"></i></button></a>
+        </div>
+      </header>
+    </div>
+
+    <!--Topic Proper-->
+    <div class="section02">
+      <div class="w3-theme-lesson0 w3-card content">
+        <br>
+        <!-- Learning objectives (left) and outline (with quick links) (right)-->
+        <div class="w3-container">
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Lesson Objectives</b></h2>
+              <ol>
+                <li>Recognize conditional statements and its formats.</li>
+                <li>Determine the logical equivalences between conditional statements.</li>
+                <li>Differentiate the formats of conditional statements.</li>
+                <li>Evaluate expressions involving conditionals.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Topic Outline</b></h2>
+              <ol>
+                <li><a href="#Topic1">Evaluating Conditional Statements</a></li>
+                <li><a href="#Topic2">Representation of If-Then as Or</a></li>
+                <li><a href="#Topic3">Negation of Conditional Statements</a></li>
+                <li><a href="#Topic4">Converse, Inverse, and Contrapositive</a></li>
+                <li><a href="#Topic5">Biconditionals</a></li>
+              </ol>
+              <div id="Topic1"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Lesson content-->
+        <div class="w3-container">
+          <div class="w3-padding">
+
+            <h2 class="w3-hide-small"><b>Evaluating Conditional Statements</b></h2> <!--Topic 1-->
+            <h2 class="w3-hide-medium w3-hide-large"><b>Conditional Statements</b></h2>
+            <p>
+              When you make a logical inference or deduction, you reason <b class="w3-text-lime">from a hypothesis to a
+                conclusion</b>. Your aim is to be able to say, “If such and such is known, then something or
+              other must be the case.”
+            </p>
+            <p class="w3-lime w3-padding">
+              If p and q are statement variables, the <b>conditional</b> of $$q$$ by $$p$$ is “If $$p$$ then $$q$$” or
+              “$$p$$ implies $$q$$” and is denoted $$p \rightarrow q$$. It is false when $$p$$ is true and $$q$$ is
+              false;
+              otherwise it is true. We call $$p$$ the <b>hypothesis</b> (or antecedent) of the conditional
+              and $$q$$ the <b>conclusion</b> (or consequent).
+            </p>
+            <p>
+              Things to note:
+            <ol>
+              <li>A conditional statement that is true by virtue of the fact that
+                its hypothesis is false if often called <b class="w3-text-lime">vacuously true</b> or true by
+                default.
+              <li>In the expression that include $$\rightarrow$$ as well as other logical
+                operators such as $$\wedge$$, $$\vee$$, and $$\sim$$, the order of operation is that $$\rightarrow$$
+                is performed last.</li>
+            </ol>
+            </p>
+            <!--Accordition: Example 1a -->
+            <button onclick="myAccFunc('Demo1a')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 1a: </b>Construct a truth table for the statement form $$p ∨ ∼q →∼p$$.</button>
+            <div id="Demo1a" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-2a.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-2a.png">
+                </p>
+              </div>
+            </div>
+            <br>
+            <p>
+              Imagine that you are trying to solve a problem involving three statements: p, q, and r .
+              Suppose you know that the truth of r follows from the truth of p and also that the truth
+              of r follows from the truth of q. Then no matter whether p or q is the case, the truth of r
+              must follow. The <b class="w3-text-lime">division-into-cases method</b> of analysis is based on this idea. See the next example.
+            </p>
+
+            <!--Accordition: Example 1b -->
+            <button onclick="myAccFunc('Demo1b')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 1b: </b>Show that $$p ∨ q → r ≡ ( p → r) ∧ (q → r)$$</button>
+            <div id="Demo1b" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-2b.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-2b.png">
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic2">
+            <h2><b>Representation of If-Then as Or</b></h2> <!--Topic 2-->
+            <p class="w3-lime w3-padding">
+              The statement "If p then q" is equivalent to <b>"not p or q"</b>. Symbolically,
+              $$p →q ≡ ∼p ∨ q$$.
+            </p>
+            <p>
+              The logical equivalence of “if p then q” and “not p or q” is occasionally used in everyday
+              speech. Here is one instance.
+            </p>
+
+            <!--Accordition: Example 2 -->
+            <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 2: </b>Rewrite the following statement in if-then form: "Either you study for the test or you
+              fail."</button>
+            <div id="Demo2" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  Let $$\sim p$$ be "you study for the test" and $$q$$ be you fail. <br>
+                  Then the given form is $$∼p ∨ q$$. <br>
+                  Also $$p$$ is $$\sim(\sim p)$$ which is "you do not study for the test". <br>
+                  So the equivalent if-then version, $$p →q$$, is <br>
+                  "If you do not study for the test, then you fail.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic3">
+            <h2><b>Negation of Conditional Statements</b></h2> <!--Topic 3-->
+            <p class="w3-padding w3-lime">
+              By definition, p →q is false if, and only if, its hypothesis, p, is true and its conclusion,
+              q, is false. It follows that the negation of “if p then q” is logically equivalent to <b>“p and not
+                q.”</b>
+              This can be restated symbolically as follows: <br>
+              $$∼(p →q) ≡ p ∧ ∼q$$
+            </p>
+            <p>
+              You can also obtain this result by starting from the logical equivalence $$p →q ≡ ∼p ∨ q$$.<br>
+              Take the negation of both sides to obtain
+              $$∼(p →q) ≡ ∼(∼p ∨ q)$$, which is equivalent to $$∼(∼p) ∧ (∼q)$$ by De Morgan’s laws, which is equivalent
+              to
+              $$p ∧ ∼q$$ by the double negation law.
+            </p>
+
+            <!--Accordition: Example 3 -->
+            <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 3: </b>Negate the following statements: <br>
+              (1) If my car is in the repair shop, then I cannot get to class. <br>
+              (2) If Sara lives in Athens, then she lives in Greece.
+            </button>
+            <div id="Demo3" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) My car is in the repair shop and I can get to class.<br>
+                  (2) Sara lives in Athens and she does not live in Greece. (Sara might live in Athens,
+                  Georgia; Athens, Ohio; or Athens, Wisconsin.) <br><br>
+                  Note: NEVER write the negation of an if-then statement as another if-then statement!
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic4">
+            <h2><b>Converse, Inverse, and Contrapositive</b></h2> <!--Topic 4-->
+            <p class="w3-lime w3-padding">
+              Suppose a conditional statement of the form “If p then q” is given <br>
+              1. The contrapositive is "If ∼q then ∼p" <br>
+              2. The converse is “If q then p” <br>
+              3. The inverse is “If ∼p then ∼q” <br>
+              Symbolically, <br>
+              The contrapositive of $$p →q$$ is $$∼q →∼p$$. <br>
+              The converse of $$p →q$$ is $$q → p$$, <br>
+              and the inverse of $$p →q$$ is $$∼p →∼q$$.
+            </p>
+            <p>
+              Things to note:
+            <ol>
+              <li>A conditional statement is logically equivalent to its contrapositive.</li>
+              <li>A conditional statement and its converse are not logically equivalent.</li>
+              <li>A conditional statement and its inverse are not logically equivalent.</li>
+              <li>The converse and the inverse of a conditional statement are logically equivalent to each other.</li>
+            </ol>
+            </p>
+            <!--Accordition: Example 4 -->
+            <button onclick="myAccFunc('Demo4')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 4: </b>Write the converse, inverse, and contrapositive of the statement:
+              "If Howard can swim across the lake, then Howard can swim to the island."</button>
+            <div id="Demo4" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  Converse: If Howard can swim to the island, then Howard can swim across the lake. <br> <br>
+                  Inverse: If Howard cannot swim across the lake, then Howard cannot swim to the island. <br> <br>
+                  Contrapositive: If Howard cannot swim to the island, then Howard cannot swim across the lake.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic5">
+            <h2><b>Biconditionals</b></h2> <!--Topic 5-->
+            <p>
+              The following expression can be rewritten in two ways: "John will break the world’s record for the mile
+              run only if
+              he runs the mile in under four minutes."
+            <ol>
+              <li>If John breaks the world’s record, then he will have run the mile in
+                under four minutes. (Implication)</li>
+              <li>If John does not run the mile in under four minutes, then he will
+                not break the world’s record. (Contrapositive)</li>
+            </ol>
+            Note that it is possible for “p only if q” to be true at the some time that “p if q” is
+            false. For instance, to say that John will break the world’s record only if he runs the mile
+            in under four minutes does not mean that John will break the world’s record if he runs
+            the mile in under four minutes. His time could be under four minutes but still not be fast
+            enough to break the record.
+            </p>
+            <p>
+              This is where the concept of biconditionals come in.
+            </p>
+            <p class="w3-lime w3-padding">
+              Given statement variables p and q, the <b>biconditional</b> of p and q is “p if, and only
+              if, q” and is denoted $$p ↔ q$$. It is true if both p and q have the same truth values and
+              is false if p and q have opposite truth values. The words if and only if are sometimes
+              abbreviated <b>iff</b>.
+            </p>
+            <p>
+              In order of operations, $$↔$$ is coequal with $$→$$. As with $$∧$$ and $$∨$$, the only way to indicate
+              precedence between them is to use parentheses. The full hierarchy of operations for the
+              five logical operators seen below.
+            <ol>
+              <li>Evaluate negations $$∼$$ first. </li>
+              <li>Evaluate $$∧$$ and $$∨$$ second. When both are present, parentheses may be
+                needed.</li>
+              <li>Evaluate $$→$$ and $$↔$$ third. When both are present, parentheses may
+                be needed.</li>
+            </ol>
+            </p>
+
+            <!--Accordition: Example 5 -->
+            <button onclick="myAccFunc('Demo5')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 5: </b>Show that $$p ↔ q ≡ ( p → q) ∧ (q → p)$$.</button>
+            <div id="Demo5" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-2c.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-2c.png">
+                </p>
+              </div>
+            </div>
+
+            <br>
+            <!--Accordition: Example 6-->
+            <button onclick="myAccFunc('Demo6')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 6: </b>Rewrite the following statement as a conjunction of two if-then statements:
+              "This computer program is correct if, and only if, it produces
+              correct answers for all possible sets of input data."</button>
+            <div id="Demo6" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  If this program is correct, then it produces the correct answes for all possible sets
+                  of input data; and if this program produces the correct answers for all possible sets of
+                  input data, then it is correct.
+                </p>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="w3-center">
+              <button class="w3-btn w3-large w3-theme-quizbutton w3-hover-white w3-round-large w3-centered w3-card"
+                onclick="document.getElementById('quiz1').style.display='block'" style="font-weight:500;"><b>Go To
+                  Quiz</b></button>
+              <br><br>
+              <a href="./1-1.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                    class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+              <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+                  style="font-weight:500;">Topics</button></a>
+              <a href="./1-3.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                    class="fa fa-angle-right"></i></button></a>
+              <br><br>
+              <p>Questions or clarifications on this topic?
+                <a href="../Contact.html" class="w3-hover-black w3-blue-gray">Click here</a> to place your feedback.
+                Your messgages will be highly appreciated.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--End animation scope-->
+    </div>
+
+    <!-- Modal for quiz taking: Quiz 1-->
+    <div id="quiz1" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz1').style.display='none'" class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>1.2 Conditional Statements</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./1-2Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large" style="font-weight:500;"><b>Take the
+                Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:70px">
+      <h4>Follow Us on</h4>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+      <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+      <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+      <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+      <div class="w3-tooltip w3-right">
+        <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+        <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+      </div>
+    </footer>
+
+    <script>
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Accordions
+      function myAccFunc(id) {
+        var y = document.getElementById(id);
+        if (y.className.indexOf("w3-show") == -1) {
+          y.className += " w3-show";
+        } else {
+          y.className = y.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+
+</body>
+
+</html>

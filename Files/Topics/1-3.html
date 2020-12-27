@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>1.3 Valid and Invalid Arguments | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../Images/Logo.ico">
+  <link rel="stylesheet" href="../Base.css">
+  <link rel="stylesheet" href="../ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--For MathTex expressions-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    mjx-container[jax="CHTML"][display="true"] {
+      display: inline !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-base w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-base" href="javascript:void(0);"
+        onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white">
+        <i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Privacy & Terms</a>
+      <div class="w3-bar-item w3-hide-medium w3-hide-large mobileheader">TOPIC 1.3</div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-base w3-hide w3-hide-large w3-hide-medium">
+      <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button">Privacy & Terms</a>
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div class="w3-animate-bottom">
+
+    <!-- Header -->
+    <div class="section0 header">
+      <header class="w3-container w3-theme-lesson0 w3-padding w3-card content" id="myHeader">
+        <div class="w3-center">
+          <br>
+          <img class="w3-hide-small" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:300px; height:auto;"><br class="w3-hide-small">
+          <img class="w3-hide-medium w3-hide-large" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:250px; height:auto;"><br
+            class="w3-hide-medium w3-hide-large">
+          <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>TOPIC 1.3<br>Valid and Invalid Arguments</b>
+          </h1>
+          <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>TOPIC 1.3<br>Valid and Invalid Arguments</b>
+          </h3>
+          <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>1.3 Valid and Invalid Arguments</b></h3>
+        </div>
+        <div class="w3-center w3-padding">
+          <a href="./1-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+          <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+              style="font-weight:500;">Topics</button></a>
+          <a href="./2-1.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                class="fa fa-angle-right"></i></button></a>
+        </div>
+      </header>
+    </div>
+
+    <!--Topic Proper-->
+    <div class="section02">
+      <div class="w3-theme-lesson0 w3-card content">
+        <br>
+        <!-- Learning objectives (left) and outline (with quick links) (right)-->
+        <div class="w3-container">
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Lesson Objectives</b></h2>
+              <ol>
+                <li>Recognize different argument forms.</li>
+                <li>Test argument forms for validity.</li>
+                <li>Familiarize the different rules of inference.</li>
+                <li>Apply the rules of inference in proving argument forms.</li>
+                <li>Recognize fallacies and their types.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Topic Outline</b></h2>
+              <ol>
+                <li><a href="#Topic1">Recognizing Argument Forms</a></li>
+                <li><a href="#Topic2">Determining Validity or Invalidity</a></li>
+                <li><a href="#Topic3">Rules of Inference</a></li>
+                <li><a href="#Topic4">Complex Deduction of Arguments</a></li>
+                <li><a href="#Topic5">Fallacies and Unsound Arguments</a></li>
+                <li><a href="#Topic6">Summary of Rules of Inference</a></li>
+              </ol>
+              <div id="Topic1"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Lesson content-->
+        <div class="w3-container">
+          <div class="w3-padding">
+
+            <h2><b>Recognizing Argument Forms</b></h2> <!--Topic 1-->
+            <p>
+              In mathematics and logic, an argument is not a dispute. It is <b class="w3-text-lime">a sequence of
+                statements ending in a conclusion</b>. In this section we show how to determine whether an argument is
+              valid—that is, whether the conclusion follows necessarily from the preceding statements.
+              We will show that this determination depends only on the form of an argument, not on its
+              content.
+            </p>
+            <p class="w3-lime w3-padding">
+              An <b>argument</b> is a sequence of statements, and an <b>argument form</b> is a sequence
+              of statement forms. All statements in an argument and all statement forms in an
+              argument form, except for the final one, are called <b>premises</b> (or <b>assumptions</b> or
+              <b>hypotheses</b>). The final statement or statement form is called the <b>conclusion</b>. The
+              symbol $$∴$$, which is read “therefore,” is normally placed just before the conclusion. <br>
+              To say that an argument form is <b>valid</b> means that no matter what particular statements
+              are substituted for the statement variables in its premises, if the resulting
+              premises are all true, then the conclusion is also true. To say that an argument is
+              valid means that its form is valid.
+            </p>
+            <br>
+            <!--Accordition: Example 1 -->
+            <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 1: </b>Determine the abstract form of the argument form: "If Socrates is a man, then Socrates
+              is mortal.
+              Socrates is a man. Therefore, Socrates is mortal."</button>
+            <div id="Demo1" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">If $$p$$ then $$q$$. $$p$$. $$∴q$$.</p>
+              </div>
+            </div>
+
+            <br id="Topic2">
+            <h2><b>Determining Validity or Invalidity</b></h2> <!--Topic 2-->
+            <p>The following are the steps in testing an argument form for validity:
+            <ol>
+              <li>Identify the premises and conclusion of the argument form. </li>
+              <li>Construct a truth table showing the truth values of all the premises and the conclusion.</li>
+              <li>A row of the truth table in which all the premises are true is called a <b class="w3-text-lime">critical row</b>.</li>
+              <ol type="a">
+                <li>If there is a critical row in which the conclusion is false, then it is possible for an
+                  argument of the given form to have true premises and a false conclusion, and so
+                  the argument form is invalid. </li>
+                <li>If the conclusion in every critical row is true, then
+                  the argument form is valid.</li>
+              </ol>
+            </ol>
+            </p>
+
+            <!--Accordition: Example 2 -->
+            <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 2: </b>Determine the validity of the argument form:<br>
+              <div class="w3-center">
+                $$p →q ∨ ∼r$$ <br>
+                $$q → p ∧ r$$ <br>
+                $$∴ p →r$$</div>
+            </button>
+            <div id="Demo2" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-3a.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-3a.png"> <br>
+                  The second critical row shows that an argument of this form can have true premises and a false
+                  conclusion. Hence this form of argument is invalid.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic3">
+            <h2><b>Rules of Inference</b></h2> <!--Topic 3-->
+            <p>
+              An argument form consisting of two premises and a conclusion is called a <b class="w3-text-lime">syllogism</b>.
+              The first and second premises are called the <b class="w3-text-lime">major premise</b> and
+              <b class="w3-text-lime">minor premise</b>, respectively.
+              A <b class="w3-text-lime">rule of inference</b> is a form of argument that is valid.
+            </p>
+            <p>
+              The most famous form of syllogism in logic is called <b class="w3-text-lime">modus ponens</b> (Latin
+              meaning: method of affirming)
+              while a similar form of it is <b class="w3-text-lime">modus tollens</b> (Latin meaning: method of
+              denying). They have the following forms:
+            </p>
+            <div class="w3-center w3-lime w3-row w3-padding">
+              <div class="w3-half w3-padding-small">
+                <b>Modus Ponens</b> <br>
+                If $$p$$ then $$q$$. <br>
+                $$p$$. <br>
+                Therefore $$q$$.
+              </div>
+              <div class="w3-half w3-padding-small">
+                <b>Modus Tollens</b> <br>
+                If $$p$$ then $$q$$. <br>
+                $$\sim q$$. <br>
+                Therefore $$\sim p$$.
+              </div>
+            </div>
+
+            <br>
+            <!--Accordition: Example 3 -->
+            <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 3: </b>Argument forms demonstrating Modus Ponens and Modus Tollens</button>
+            <div id="Demo3" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (Modus Ponens) If the sum of the digits of 371,487 is divisible by 3,
+                  then 371,487 is divisible by 3.
+                  The sum of the digits of 371,487 is divisible by 3.
+                  $$∴$$ 371,487 is divisible by 3. <br> <br>
+                  (Modus Tollens) If Zeus is human, then Zeus is mortal.
+                  Zeus is not mortal.
+                  $$∴$$ Zeus is not human.
+                </p>
+              </div>
+            </div>
+            <p>
+              An intuitive explanation for the validity of modus tollens uses <b class="w3-text-lime">proof by
+                contradiction</b>.
+              Based on the previous example, suppose (1) If Zeus is human, then Zeus is mortal; and (2) Zeus is not
+              mortal.
+              Must Zeus necessarily be nonhuman? Yes! Because, if Zeus were human, then by (1) he would be mortal.
+              But by (2) he is not mortal. Hence, Zeus cannot be human.
+            </p>
+            <br>
+            <p>
+              The following are some other essential rules of inference:
+            </p>
+            <ol>
+              <li>
+                <b class="w3-text-lime">Generalization.</b> $$(p, ∴ p ∨ q)$$ <br>
+                Example: Anton is a junior. <br>
+                $$∴$$ (more generally) Anton is a junior or Anton is a senior.
+              </li>
+              <li>
+                <b class="w3-text-lime">Specialization.</b> $$(p ∧ q, ∴ p)$$ <br>
+                Example: Ana knows numerical analysis and Ana knows graph algorithms. <br>
+                $$∴$$ (in particular) Ana knows graph algorithms.
+              </li>
+              <li>
+                <b class="w3-text-lime">Elimination.</b> $$(p ∨ q, ∼q, ∴ p)$$ <br>
+                Example: John got an A or B in the card. John did not get an A. <br>
+                $$∴$$ John got a B in the card.
+              </li>
+              <li>
+                <b class="w3-text-lime">Transitivity.</b> $$(p →q, q →r, ∴ p →r)$$ <br>
+                Example: If 36 is divisible by 18, then it is divisible by 9.
+                If 36 is divisible by 9, the sum of its digits is divisible by 9. <br>
+                $$∴$$ If 36 is divisible by 18, then the sum of its digits is divisible by 9.
+              </li>
+              <li>
+                <b class="w3-text-lime">Proof by division into cases.</b> $$(p ∨ q, p →r, q →r, ∴ r)$$ <br>
+                Example: $$x$$ is positive or $$x$$ is negative.
+                If $$x$$ is positive, then $$x^{2} \gt 0$$.
+                If $$x$$ is negative, then $$x^{2} \gt 0$$. <br>
+                $$∴ x^{2} \gt 0$$.
+              </li>
+              <li>
+                <b class="w3-text-lime">Contradiction rule.</b> $$(\sim p \rightarrow F, ∴ p)$$ <br>
+                The concept of logical contradiction can be used to make
+                inferences through a technique of reasoning called the
+                contradiction rule: <br>
+                If you can show that the supposition that statement p is
+                false leads logically to a contradiction, then you can deduce
+                that p is true. The truth table below presents the validity of the above argument form. <br> <br>
+                <img class="w3-hide-small" style="max-width:60%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-3d.png">
+                <img class="w3-hide-medium w3-hide-large" style="max-width:80%;position:relative;display:block;margin:auto;"
+                  src="../../Images/Lessons/1-3d.png"> <br>
+                There is only one critical row in which the premise is true, <br>
+                and in this row the conclusion is also true.
+                Hence this form of argument is valid.
+              </li>
+            </ol>
+
+            <br id="Topic4">
+            <h2><b>Complex Deduction of Arguments</b></h2> <!--Topic 4-->
+            <p>
+              Now that we learned the basic rules of inference as shown above, we are going to
+              analyze, deduce, and verify various complex argument forms involving more variables and premises.
+              This involves utilizing several rules of inference in the right order to properly deduce statements
+              and form valid conclusions. Consider the example below:
+            </p>
+
+            <!--Accordition: Example 4 -->
+            <button onclick="myAccFunc('Demo4')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 4: </b>
+              You are about to leave for school in the morning and discover that you don’t have your
+              glasses. You know the following statements are true: <ol type="a">
+                <li>If I was reading the newspaper in the kitchen, then my glasses are on the kitchen table. </li>
+                <li>If my glasses are on the kitchen table, then I saw them at breakfast. </li>
+                <li>I did not see my glasses at breakfast. </li>
+                <li>I was reading the newspaper in the living room or I was reading the newspaper in the
+                  kitchen. </li>
+                <li>If I was reading the newspaper in the living room then my glasses are on the coffee
+                  table. </li>
+              </ol>
+              Question: Where are the glasses?
+            </button>
+            <div id="Demo4" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p>
+                  Step 1: Represent statement fragments using propositional variables.</p>
+                <ol type="A" class="w3-left-align">
+                  <li>I was reading the newspaper in the kitchen.</li>
+                  <li>My glasses are on the kitchen table.</li>
+                  <li>I saw my glasses at breakfast.</li>
+                  <li>I was reading the newspaper in the living room.</li>
+                  <li>My glasses are on the coffee table.</li>
+                </ol>
+                Step 2: Reconstruct the argument form using the above variables.
+                <ol type="a">
+                  <li>$$A\rightarrow B$$</li>
+                  <li>$$B\rightarrow C$$</li>
+                  <li>$$\sim C$$</li>
+                  <li>$$D\vee A$$</li>
+                  <li>$$D\rightarrow E$$</li>
+                </ol>
+                Step 3: Apply the rules of inference to draw the conclusion of each
+                step until you arrive at the final answer.
+                <ol type="1">
+                  <li>$$A\rightarrow B$$ by (a) <br> $$B\rightarrow C$$ by (b) <br> $$∴A \rightarrow C$$ by transitivity
+                  </li>
+                  <li>$$A \rightarrow C$$ by (1) <br> $$\sim C$$ by (c) <br> $$∴\sim A$$ by Modus Tollens</li>
+                  <li>$$D\vee A$$ by (d) <br> $$\sim A$$ by (2) <br> $$∴D$$ by Elimination</li>
+                  <li>$$D \rightarrow E$$ by (e) <br> $$D$$ by (3) <br> $$∴E$$ by Modus Ponens</li>
+                </ol>
+                <p>
+                  Thus, the glasses are on the table.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic5">
+            <h2><b>Fallacies and Unsound Arguments</b></h2> <!--Topic 5-->
+            <p>
+              A fallacy is an error in reasoning that results in an invalid
+              arguments. Three common fallacies are:
+            <ol>
+              <li>using ambiguous premises and treating them as if they were
+                unambiguous.</li>
+              <li>circular reasoning (assuming what is to be proved without
+                having derived it from the premises)</li>
+              <li>jumping to a conclusion (without adequate grounds).</li>
+            </ol>
+            </p>
+            <p class="w3-lime w3-padding">
+              For an argument to be <b>valid</b>, every argument of the same form
+              <b>whose premises are all true</b> must have a <b>true conclusion.</b> It follows that for an argument to
+              be invalid
+              means that there is an argument of that form whose premises are all true and whose
+              conclusion is false.
+            </p>
+            <p>
+              Two other fallacies are called <b class="w3-text-lime">converse error</b> and <b class="w3-text-lime">inverse error</b>.
+            <ol>
+              <li>Converse Error (the fallacy of affirming the consequence)</li>
+              <li>Inverse Error (the fallacy of denying the antecedent)</li>
+            </ol>
+            </p>
+
+            <!--Accordition: Example 5 -->
+            <button onclick="myAccFunc('Demo5')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 5: </b>Some arguments with fallacies committed</button>
+            <div id="Demo5" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (Converse Error) If Anton is a cheater, then Anton sits in the back now.
+                  Anton sits in the back now.
+                  Therefore, Anton is a cheater. <br> <br>
+                  (Inverse Error) If interest rates are going up, then stock market prices will go
+                  down.
+                  Interest are not going up.
+                  Therefore, stock market prices will not go down.
+                </p>
+              </div>
+            </div>
+
+            <br>
+            <p>
+              If an argument seems valid, people accept the conclusion as true.
+              And if an argument seems fishy, they think the conclusion must be
+              false. <b class="w3-text-lime">These are not correct</b>.
+            </p>
+            <p class="w3-padding w3-lime">
+              An argument is called <b>sound</b> if, and only if, it is valid <i>and</i> all its premises are true.
+              An argument that is not sound is called <b>unsound</b>.
+            </p>
+
+            <!--Accordition: Example 6-->
+            <button onclick="myAccFunc('Demo6')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 6: </b>Some unsound arguments</button>
+            <div id="Demo6" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (Valid argument with a false premise and false conclusion)
+                  If John Lennon was a rock star, then John Lennon had red hair.
+                  John Lennon was a rock star.
+                  Therefore, John Lennon had red hair. <br> <br>
+                  (Invalid argument with true premises and true conclusion)
+                  If New York is a big city, then New York has tall building.
+                  New York has tall buildings.
+                  Therefore, New York is a big city.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic6">
+            <h2><b>Summary of Rules of Inference</b></h2> <!--Topic 6-->
+            <div class="w3-center w3-lime w3-row w3-padding">
+              <div class="w3-half w3-padding-16">
+                <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-3b.png">
+                <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                  src="../../Images/Lessons/1-3b.png">
+              </div>
+              <div class="w3-half w3-padding-16">
+                <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-3c.png">
+                <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                  src="../../Images/Lessons/1-3c.png">
+              </div>
+            </div>
+
+          </div>
+
+          <br>
+          <br>
+          <div class="w3-center">
+            <button class="w3-btn w3-large w3-theme-quizbutton w3-hover-white w3-round-large w3-centered w3-card"
+              onclick="document.getElementById('quiz1').style.display='block'" style="font-weight:500;"><b>Go To
+                Quiz</b></button>
+            <br><br>
+            <a href="./1-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                  class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+            <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+                style="font-weight:500;">Topics</button></a>
+            <a href="./2-1.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                  class="fa fa-angle-right"></i></button></a>
+            <br><br>
+            <p>Questions or clarifications on this topic?
+              <a href="../Contact.html" class="w3-hover-black w3-blue-gray">Click here</a> to place your feedback.
+              Your messgages will be highly appreciated.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!--End animation scope-->
+  </div>
+
+  <!-- Modal for quiz taking: Quiz 1-->
+  <div id="quiz1" class="w3-modal" style="display: none;">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme">
+        <span onclick="document.getElementById('quiz1').style.display='none'" class="w3-button w3-display-topright">×</span>
+        <h4><b>Proceed to quiz?</b></h4>
+      </header>
+      <div class="w3-padding w3-center">
+        <p>You are about to take the following quiz:</p>
+        <h5 class="w3-center"><b>1.3 Valid and Invalid Arguments</b></h5>
+        <p>Make sure you are all set for the quiz, and then click the button below.</p>
+        <a href="./1-3Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large" style="font-weight:500;"><b>Take the
+              Quiz</b></button></a>
+      </div>
+      <footer class="w3-container w3-theme">
+        <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:70px">
+    <h4>Follow Us on</h4>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+    <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+    <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+    <div class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>
+
+  <script>
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // Accordions
+    function myAccFunc(id) {
+      var y = document.getElementById(id);
+      if (y.className.indexOf("w3-show") == -1) {
+        y.className += " w3-show";
+      } else {
+        y.className = y.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
