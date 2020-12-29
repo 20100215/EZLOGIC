@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--This is a UNIVERSAL Quiz Maker template. DO NOT DELETE THIS FILE!!-->
+<!--CREATE A COPY of this file BEFORE you start editing!!-->
+
+<!--QUIZ MAKER Version 1.2 (Dec 29, 2020) by Wayne Matthew A. Dayata-->
+<!--Supports multiple choices and fill in the blanks question types, with or without images-->
+<!--All multiple choice then all fill in the blanks. Question type cannot be mixed yet-->
+
+<!--Security feature: Blocks continuation of quiz when changing of tabs detected-->
+<!--Features to add soon: Shuffle questions, shuffle question order, quiz timer and auto submission-->
+
+<!--Read all instructions in the within the green comments, and type all contents in the white portion (innerHTML) below the instruction.-->
+<!--Type your questions and answer choices on the indicated areas-->
+
+<head>
+  <!--Enter Quiz Title-->
+  <title>QUIZ # Quiz Title | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../Images/Logo.ico">
+  <link rel="stylesheet" href="../Base.css">
+  <link rel="stylesheet" href="../ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    mjx-container[jax="CHTML"][display="true"] {
+      display: inline !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript">
+
+    $(window).on("blur focus", function (e) {
+      var prevType = $(this).data("prevType");
+
+      if (prevType != e.type) {   //  reduce double fire issues
+        switch (e.type) {
+          case "blur": {
+            if (document.getElementById("quizproper").style.display == "block" && document.getElementById("quiz0").disabled == false) {
+              document.getElementById("quizproper").style.display = "none";
+              document.getElementById("header00").style.display = "none";
+              document.getElementById("footer00").style.display = "none";
+              document.getElementById('stop').style.display = 'block';
+            }
+          }
+        }
+      }
+
+      $(this).data("prevType", e.type);
+    })
+  </script>
+
+</head>
+
+<body>
+
+  <div class="w3-top">
+    <!--Enter Quiz Number-->
+    <div class="w3-bar w3-theme-base w3-left-align w3-padding">QUIZ # HERE
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div id="animate" class="w3-animate-bottom">
+
+    <!-- Header -->
+    <div id="header00" class="section0 header">
+      <header class="w3-container w3-theme-quiz0 w3-padding w3-card content" id="myHeader" style="opacity:95% !important">
+        <div class="w3-center">
+          <br>
+          <img class="w3-hide-small" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:300px; height:auto;"><br class="w3-hide-small">
+          <img class="w3-hide-medium w3-hide-large" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:250px; height:auto;"><br
+            class="w3-hide-medium w3-hide-large">
+          <!--Enter quiz title again-->
+          <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>QUIZ #<br>QUIZ TITLE</b>
+          </h1>
+          <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>QUIZ #<br>QUIZ TITLE</b>
+          </h3>
+          <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>QUIZ # QUIZ TITLE</b></h3>
+        </div>
+        <div class="w3-center w3-padding">
+          <p id="header0" style="display:none"><b>Read each item carefully and answer what is asked.
+              Hit the submit button once you are done.</b></p>
+          <p id="header1" style="font-weight:bold"></p>
+        </div>
+      </header>
+    </div>
+
+    <!--Quiz Introduction - shows before taking the quiz-->
+    <div id="quizintro" class="section02" style="display:block">
+      <div class="w3-theme-quiz0 w3-card content" style="opacity:95% !important">
+        <div class="w3-container">
+          <div class="w3-padding">
+            <div class="w3-row w3-center"><br>
+              <h2 class="w3-center"><b>Quiz details</b></h2>
+              <div class="w3-large w3-padding">
+                <p>Questions:
+                  <!--Insert total number of items here-->
+                  <b><span id="numitems">10</span></b> &nbsp; &nbsp;
+                  Points:
+                  <!--Insert total number of points here-->
+                  <b><span>10</span></b>
+                  <span class="w3-hide-small w3-large"> &nbsp; &nbsp; Time limit: <b>None</b></span>
+                  <span class="w3-medium w3-hide-large w3-large"><br> Time limit: <b>None</b></span>
+                  </b>
+                </p>
+              </div>
+              <!--Insert total number of MULTIPLE CHOICE items here-->
+              <div id="nummultiplechoice" class="w3-hide">8</div>
+              <hr>
+            </div>
+            <h2 class="w3-center"><b>Quiz instructions</b></h2>
+            <ol>
+              <!--Insert quiz instructions here-->
+              <li>This test is composed of multiple choice and short-answer response questions.</li>
+              <li>Read each item carefully and select the best answer or encode your answer as directed.</li>
+              <li>Keep this tab in focus while taking the quiz. Switching of tabs or exiting the tab while taking the quiz is strictly prohibited
+                and is considered cheating. <br><span style="color:rgb(88, 43, 129)"><b>NOTE: This site will block you immediately from continuing the
+                    quiz if you do so and you will lose ALL progress in this quiz.</b></span></li>
+              <li>When you are ready, hit the button below to start.</li>
+            </ol>
+            <div class="w3-center w3-padding-32">
+              <a href="#"><button type="button" class="w3-btn w3-padding w3-large w3-theme-dark w3-hover-white w3-round-large w3-centered w3-card"
+                  onclick="TakeTheQuiz()" style="font-weight:500;">
+                  <b>Take The Quiz</b></button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Quiz Proper - shows when user starts taking the quiz-->
+    <div id="quizproper" class="section02" style="display:none">
+      <div class="w3-theme-quiz0 w3-card content" style="opacity:95% !important">
+        <form class="quiz">
+          <fieldset id="quiz0">
+
+            <!-- Question 1 -->
+            <br>
+            <div class="w3-container">
+              <div id="A1" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">1</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium">Question 1 <br><br>(1 point)</b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q1Points" class="w3-hide">1</div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q1Ans" class="optionlabel"> A </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1" value="B">
+                    <!-- Enter answer B here-->
+                    <div class="optionlabel"> B </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1" value="C">
+                    <!-- Enter answer C here-->
+                    <div class="optionlabel"> C </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q1" id="Q1" value="D">
+                    <!-- Enter answer D here-->
+                    <div class="optionlabel"> D </div>
+                  </label>
+                </div>
+                <p id="B1"></p>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <br>
+            <div class="w3-container">
+              <div id="A2" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">2</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium">Question 2 <br><br>(1 point)</b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q2Points" class="w3-hide">1</div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q2Ans" class="optionlabel"> A </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q2" class="optionlabel"> B </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q2" class="optionlabel"> C </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q2" id="Q2" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q2" class="optionlabel"> D </div>
+                  </label>
+                </div>
+                <p id="B2"></p>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <br>
+            <div class="w3-container">
+              <div id="A3" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">3</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium">Question 3 <br><br>(1 point)</b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q3Points" class="w3-hide">1</div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q3Ans" class="optionlabel"> A </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q3" class="optionlabel"> B </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q3" class="optionlabel"> C </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q3" id="Q3" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q3" class="optionlabel"> D </div>
+                  </label>
+                </div>
+                <p id="B3"></p>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <br>
+            <div class="w3-container">
+              <div id="A4" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">4</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium">Question 4 <br><br>(1 point)</b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q4Points" class="w3-hide">1</div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q4Ans" class="optionlabel"> A </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q4" class="optionlabel"> B </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q4" class="optionlabel"> C </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q4" id="Q4" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q4" class="optionlabel"> D </div>
+                  </label>
+                </div>
+                <p id="B4"></p>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <br>
+            <div class="w3-container">
+              <div id="A5" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">5</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium">Question 5 <br><br>(1 point)</b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q5Points" class="w3-hide">1</div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q5Ans" class="optionlabel"> A </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q5" class="optionlabel"> B </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q5" class="optionlabel"> C </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q5" id="Q5" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q5" class="optionlabel"> D </div>
+                  </label>
+                </div>
+                <p id="B5"></p>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <br>
+            <div class="w3-container">
+              <div id="A6" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">6</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium">Question 6 <br><br>(1 point)</b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q6Points" class="w3-hide">1</div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q6Ans" class="optionlabel"> A </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q6" class="optionlabel"> B </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q6" class="optionlabel"> C </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q6" id="Q6" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q6" class="optionlabel"> D </div>
+                  </label>
+                </div>
+                <p id="B6"></p>
+              </div>
+            </div>
+
+            <!-- Question 7/ template with images-->
+            <br>
+            <div class="w3-container">
+              <div id="A7" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">7</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium"> Question 7
+                      <!-- Insert image link/file name and directory in ALL APPEARANCES of src in the within this question container-->
+                      <!-- Adjust image size using PERCENTAGE when necessary. Do NOT go beyond 100%-->
+                      <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8.png">
+                      <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;"
+                        src="../../Images/Lessons/Quiz2-2Q8.png">
+                      <br><br> (1 point)
+                    </b>
+                  </div>
+                  <!--Enter number of points again here-->
+                  <div id="Q7Points" class="w3-hide">1</div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q7Ans" class="optionlabel"> A
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8a.png">
+                    </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q7" class="optionlabel"> B
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8b.png">
+                    </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q7" class="optionlabel"> C
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8c.png">
+                    </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q7" id="Q7" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q7" class="optionlabel"> D
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8d.png">
+                    </div>
+                  </label>
+                </div>
+                <p id="B7"></p>
+              </div>
+            </div>
+
+            <!-- Question 8/ template with images-->
+            <br>
+            <div class="w3-container">
+              <div id="A8" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">8</b>
+                  <div class="questionlabel">
+                    <!-- Enter question here. Indicate correct question by changing the id of the correct choice to "Q"+QuestionNumber+"Corr" -->
+                    <b class="w3-medium"> Question 8
+                      <!-- Insert image link/file name and directory in ALL APPEARANCES of src in the within this question container-->
+                      <!-- Adjust image size using PERCENTAGE when necessary. Do NOT go beyond 100%-->
+                      <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8.png">
+                      <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;"
+                        src="../../Images/Lessons/Quiz2-2Q8.png">
+                      <br><br> (1 point)
+                    </b>
+                  </div>
+                  <!--Enter number of points again here-->
+                  <div id="Q8Points" class="w3-hide">1</div>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8Corr" value="A">
+                    <!-- Enter answer A here-->
+                    <div id="Q8Ans" class="optionlabel"> A
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8a.png">
+                    </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8" value="B">
+                    <!-- Enter answer B here-->
+                    <div id="Q8" class="optionlabel"> B
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8b.png">
+                    </div>
+                  </label>
+                </div>
+                <div class="w3-row">
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8" value="C">
+                    <!-- Enter answer C here-->
+                    <div id="Q8" class="optionlabel"> C
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8c.png">
+                    </div>
+                  </label>
+                  <label class="w3-half w3-hover-grey paddingtopbottom w3-left">
+                    <input type="radio" class="w3-radio w3-left" name="Q8" id="Q8" value="D">
+                    <!-- Enter answer D here-->
+                    <div id="Q8" class="optionlabel"> D
+                      <img style="max-width:55%;position:relative;display:block;" src="../../Images/Lessons/Quiz2-2Q8d.png">
+                    </div>
+                  </label>
+                </div>
+                <p id="B8"></p>
+              </div>
+            </div>
+
+            <!-- Question 9/ fill in the blanks -->
+            <br>
+            <div class="w3-container">
+              <div id="A9" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">9</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      Question 9 <br><br>(1 point)
+                    </b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q9Points" class="w3-hide">1</div>
+                <!--Enter accepted answers here. Consider all possible user inputs such as case-sensitive inputs i.e. first letter capitalized-->
+                <!--If needed to add more fields, copy the <div></div> line and increment the Ans id by 1-->
+                <!--Enter number of accepted fields here-->
+                <div id="Q9Ans0" class="w3-hide">2</div>
+                <div id="Q9Ans1" class="w3-hide">Answer</div>
+                <div id="Q9Ans2" class="w3-hide">answer</div>
+                <div class="w3-row">
+                  <div class="paddingtopbottom">
+                    <input class="w3-input w3-hover-grey" type="text" name="Q9" id="Q9" value="" placeholder="Enter answer here...">
+                  </div>
+                </div>
+                <p id="B9"></p>
+              </div>
+            </div>
+
+            <!-- Question 10/ fill in the blanks-->
+            <br>
+            <div class="w3-container">
+              <div id="A10" class="w3-padding w3-theme-quiz1 w3-border-lime w3-border">
+                <div class="paddingtopbottom2">
+                  <b class="w3-padding w3-theme-base w3-left w3-margin-bottom">10</b>
+                  <div class="questionlabel">
+                    <b class="w3-medium">
+                      Question 10 <br><br>(1 point)
+                    </b>
+                  </div>
+                </div>
+                <!--Enter number of points again here-->
+                <div id="Q10Points" class="w3-hide">1</div>
+                <!--Enter accepted answers here. Consider all possible user inputs such as case-sensitive inputs i.e. first letter capitalized-->
+                <!--If needed to add more fields, copy the <div></div> line and increment the Ans id by 1.-->
+                <!--Enter number of points again here-->
+                <div id="Q10Ans0" class="w3-hide">2</div>
+                <div id="Q10Ans1" class="w3-hide">Answer</div>
+                <div id="Q10Ans2" class="w3-hide">answer</div>
+                <div class="w3-row">
+                  <div class="paddingtopbottom">
+                    <input class="w3-input w3-hover-grey" type="text" name="Q10" id="Q10" value="" placeholder="Enter answer here...">
+                  </div>
+                </div>
+                <p id="B10"></p>
+              </div>
+            </div>
+
+          </fieldset>
+          <br>
+          <div class="w3-center w3-padding">
+            <button id="check" type="button" class="w3-btn w3-theme-dark w3-hover-white w3-round-large w3-centered w3-card w3-padding"
+              onclick="document.getElementById('pass').style.display='block'" style="font-weight:500;">
+              <b>Submit Quiz</b></button>
+              <p id="footer1" style="display:none"><b>To retake the quiz, kindly refresh this page.</b></p>
+            <p id="footer0"><b>Review your answers before submitting. Refrain from leaving any blanks also.</b></p>
+            <p id="footer1" style="display:none"><b>To retake the quiz, kindly refresh this page.</b></p>
+            <br>
+          </div>
+
+          <!-- Modal for quiz submission-->
+          <div id="pass" class="w3-modal" style="display: none;">
+            <div class="w3-modal-content w3-card-4 w3-animate-top">
+              <header class="w3-container w3-theme-quiz0">
+                <span onclick="document.getElementById('pass').style.display='none'" class="w3-button w3-display-topright">X</span>
+                <h4><b>Proceed to submit?</b></h4>
+              </header>
+              <div class="w3-padding w3-center w3-text-black">
+                <p>You are about to submit your answers for this quiz.</p>
+                <p>To confirm your submission, click the button below.</p>
+                <a href="#"><button type="button" class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large"
+                    onclick="document.getElementById('pass').style.display='none',checkQuiz()" style="font-weight:500;">
+                    <b>Proceed</b></button></a>
+              </div>
+              <footer class="w3-container w3-theme-quiz0">
+                <p class="w3-right">- EZ Tutorial Team</p>
+              </footer>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal for page out of focus-->
+    <div id="stop" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-opacity">
+        <header class="w3-container w3-red">
+          <h4><b>Focus change detected :(</b></h4>
+        </header>
+        <div class="w3-padding w3-center w3-text-black">
+          <p>We have detected an activity that led you out of this tab's focus.</p>
+          <p>With that, you are no longer allowed to continue taking the quiz.</p>
+          <p>You may refresh the page to restart the quiz, or close the page instead.</p>
+        </div>
+        <footer class="w3-container w3-red">
+          <p class="w3-right">- EZ Tutorial Team</p>
+        </footer>
+      </div>
+    </div>
+
+    <!--End animation scope-->
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer00" class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:60px">
+    <h4>Follow Us on</h4>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+    <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+    <p>
+      <a href="../../index.html">Home</a> | <a href="../Lessons.html">Lessons</a> | <a href="../About.html">About</a> | <a
+        href="../Contact.html">Contact</a> | <a href="../Privacy&Terms.html">Privacy & Terms</a>
+    </p>
+    <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+    <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+    <div class="w3-tooltip w3-right">
+      <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+      <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+          <i class="fa fa-chevron-circle-up"></i></span></a>
+    </div>
+  </footer>
+
+  <script>
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function TakeTheQuiz() {
+      document.getElementById("quizintro").style.display = "none";
+      document.getElementById("header0").style.display = "block";
+      document.getElementById("quizproper").style.display = "block";
+      document.getElementById("animate").className = "w3-animate-opacity";
+    }
+
+    // Check the quiz
+    function checkQuiz(QuizNum) {
+      // Read-only all fields
+      // Check every answer is it matches the correct answer
+      // If correct, make bg color green, show "correct", add corresponding point
+      // If wrong, make bg color red, show "Correct answer:__", no points
+      // Show answer explanation if needed
+      // Replace "header" id with score and corresponding comment display: (score)/10
+
+      document.getElementById("animate").className = "w3-animate-bottom";
+      document.getElementById("quiz0").disabled = true;
+      document.getElementById("check").style.display = "none";
+
+      var score = 0;
+      var PerfectScore = 0;
+      var itemnum;
+      var ndx;
+      var isCorrect = 0;
+      var isNotMC = 0;
+
+      // Multiple choice loop
+      for (itemnum = 1; itemnum <= parseInt(document.getElementById("numitems").innerHTML); itemnum++) {
+
+        if (itemnum <= parseInt(document.getElementById("nummultiplechoice").innerHTML)) {
+          if (document.getElementById('Q' + itemnum + 'Corr').checked) isCorrect = 1;
+        } else {
+          isNotMC = 1;
+          for (ndx = 0; ndx < parseInt(document.getElementById('Q' + itemnum + 'Ans0').innerHTML) && document.getElementById('Q' + itemnum).value != document.getElementById('Q' + itemnum + 'Ans' + (ndx + 1)).innerHTML; ndx++) { }
+          if (ndx < parseInt(document.getElementById('Q' + itemnum + 'Ans0').innerHTML)) isCorrect = 1;
+        }
+
+        if (isCorrect == 1) {
+          document.getElementById("A" + itemnum).style.backgroundColor = "#B1D69A";
+          score += parseInt(document.getElementById('Q' + itemnum + 'Points').innerHTML);
+          document.getElementById("B" + itemnum).innerHTML = "Correct! Well done!";
+        } else {
+          document.getElementById("A" + itemnum).style.backgroundColor = "#F6BA92";
+          if (isNotMC == 0)
+            document.getElementById("B" + itemnum).innerHTML = "Correct answer: " + document.getElementById('Q' + itemnum + 'Ans').innerHTML;
+          else
+            document.getElementById("B" + itemnum).innerHTML = "Correct answer: " + document.getElementById('Q' + itemnum + 'Ans1').innerHTML;
+        }
+        isCorrect = 0;
+        PerfectScore += parseInt(document.getElementById('Q' + itemnum + 'Points').innerHTML);
+        document.getElementById("B" + itemnum).style.backgroundColor = "#FFFFFF";
+        document.getElementById("B" + itemnum).style.color = "#000000";
+        document.getElementById("B" + itemnum).className = "w3-padding";
+      }
+
+      document.getElementById("header0").style.display = "none";
+      document.getElementById("header1").style.backgroundColor = "#FFFFFF";
+      document.getElementById("header1").style.color = "#000000";
+      document.getElementById("header1").className = "w3-padding quiz";
+      document.getElementById("footer0").style.display = "none";
+      document.getElementById("footer1").style.display = "block";
+
+      if (score * 100.0 / PerfectScore < 30)
+        document.getElementById("header1").innerHTML = "Score: " + score + " out of " + PerfectScore + "<br> You can do better than this. Kindly read through the lesson again in detail.";
+      else if (score * 100.0 / PerfectScore < 60)
+        document.getElementById("header1").innerHTML = "Score: " + score + " out of " + PerfectScore + "<br> Not yet there... Try to study the lesson again and go over what you have misunderstood.";
+      else if (score * 100.0 / PerfectScore < 80)
+        document.getElementById("header1").innerHTML = "Score: " + score + " out of " + PerfectScore + "<br> Good! You have passed this quiz, but try to review your incorrectly answered questions.";
+      else if (score * 100.0 / PerfectScore < 100)
+        document.getElementById("header1").innerHTML = "Score: " + score + " out of " + PerfectScore + "<br> Great! You have almost mastered the lesson!";
+      else
+        document.getElementById("header1").innerHTML = "Score: " + score + " out of " + PerfectScore + "<br> Congratulations! You have mastered the lesson!";
+    }
+
+  </script>
+
+</body>
+
+</html>
