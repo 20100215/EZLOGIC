@@ -84,7 +84,20 @@
           </h3>
           <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>QUIZ # QUIZ TITLE</b></h3>
         </div>
-        <div class="w3-center w3-padding">
+        <div class="w3-center">
+          <p id="quizdetails" class="w3-large" style="display:block">
+            Questions:
+            <!--Insert total number of items here-->
+            <b><span id="numitems">10</span></b> &nbsp; &nbsp;
+            Points:
+            <!--Insert total number of points here-->
+            <b><span>10</span></b>
+            <span class="w3-hide-small w3-large"> &nbsp; &nbsp; Time limit: <b>None</b></span>
+            <span class="w3-hide-medium w3-hide-large w3-large"><br> Time limit: <b>None</b></span>
+            </b>
+            <!--Insert total number of MULTIPLE CHOICE items here-->
+          <div id="nummultiplechoice" class="w3-hide">8</div>
+          </p>
           <p id="header0" style="display:none"><b>Read each item carefully and answer what is asked.
               Hit the submit button once you are done.</b></p>
           <p id="header1" style="font-weight:bold"></p>
@@ -92,30 +105,12 @@
       </header>
     </div>
 
-    <!--Quiz Introduction - shows before taking the quiz-->
+    <!--Quiz instructions - shows before taking the quiz-->
     <div id="quizintro" class="section02" style="display:block">
       <div class="w3-theme-quiz0 w3-card content" style="opacity:95% !important">
         <div class="w3-container">
           <div class="w3-padding">
-            <div class="w3-row w3-center"><br>
-              <h2 class="w3-center"><b>Quiz details</b></h2>
-              <div class="w3-large" style="padding-bottom:7px">
-                <p>Questions:
-                  <!--Insert total number of items here-->
-                  <b><span id="numitems">10</span></b> &nbsp; &nbsp;
-                  Points:
-                  <!--Insert total number of points here-->
-                  <b><span>10</span></b>
-                  <span class="w3-hide-small w3-large"> &nbsp; &nbsp; Time limit: <b>None</b></span>
-                  <span class="w3-hide-medium w3-hide-large w3-large"><br> Time limit: <b>None</b></span>
-                  </b>
-                </p>
-              </div>
-              <!--Insert total number of MULTIPLE CHOICE items here-->
-              <div id="nummultiplechoice" class="w3-hide">8</div>
-              <hr>
-            </div>
-            <h2 class="w3-center"><b>Quiz instructions</b></h2>
+            <h2 class="w3-center"><b>Quiz Instructions</b></h2>
             <ol>
               <!--Insert quiz instructions here-->
               <li>This test is composed of multiple choice and short-answer response questions.</li>
@@ -639,6 +634,7 @@
     // Used to toggle the menu on smaller screens when clicking on the menu button
     function TakeTheQuiz() {
       document.getElementById("quizintro").style.display = "none";
+      document.getElementById("quizdetails").style.display = "none";
       document.getElementById("header0").style.display = "block";
       document.getElementById("quizproper").style.display = "block";
       document.getElementById("animate").className = "w3-animate-opacity";
