@@ -1,4 +1,4 @@
-# EZLOGIC - Educational Website (CIS 1102 Final Course Requirement)
+# EZLOGIC - Educational Website (HTML, CSS, JS)
 
 ![image](https://github.com/20100215/EZLOGIC/assets/84717650/c0f39143-bab5-4ca7-8853-0a9a362f074c)
 
