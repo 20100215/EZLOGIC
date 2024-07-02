@@ -1,7 +1,11 @@
- -----------------------------------------------------------
  EZLOGIC - Educational Website (CIS 1102 Final Course Requirement)
- Submitted December 28, 2020 to Dr. Archial J. Sebial
- -----------------------------------------------------------
+
+![image](https://github.com/20100215/EZLOGIC/assets/84717650/fb4daa5a-8264-41e0-8c43-b603330b5017)
+
+![image](https://github.com/20100215/EZLOGIC/assets/84717650/a9ab64ed-4391-4b38-8ac4-ae860f6a69c5)
+
+![image](https://github.com/20100215/EZLOGIC/assets/84717650/7ace16c9-fa0d-40f9-a26b-afa897805566)
+
 
  Tested in all screen resolutions from Mobile (> 320x568) to PC (< 1440x900)
  NOTES: (1) All HTML files have JavaScript codes embedded inside it. No external .js file created.
