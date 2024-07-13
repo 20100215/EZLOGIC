@@ -6,6 +6,7 @@
 
 ![image](https://github.com/20100215/EZLOGIC/assets/84717650/7ace16c9-fa0d-40f9-a26b-afa897805566)
 
+Created December 2020 as a submission for CIS 1102 - Introduction to Computing
 
 Tested in all screen resolutions from Mobile (> 320x568) to PC (< 1440x900)
 
