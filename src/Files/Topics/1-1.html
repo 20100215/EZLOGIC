@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>1.1 Logical Form and Logical Equivalence | EZLOGIC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../Images/Logo.ico">
+  <link rel="stylesheet" href="../Base.css">
+  <link rel="stylesheet" href="../ColorTheme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--For MathTex expressions-->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    mjx-container[jax="CHTML"][display="true"] {
+      display: inline !important;
+      text-align: center;
+      margin: 0 !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-theme-base w3-left-align">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-base" href="javascript:void(0);"
+        onclick="openNav()"><i class="fa fa-bars"></i></a>
+      <a href="../../index.html" class="w3-bar-item w3-button w3-hover-white">
+        <i class="fa fa-home w3-margin-right"></i>Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Privacy & Terms</a>
+      <div class="w3-bar-item w3-hide-medium w3-hide-large mobileheader">TOPIC 1.1</div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-base w3-hide w3-hide-large w3-hide-medium">
+      <a href="../../index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="../Lessons.html" class="w3-bar-item w3-button">Lessons</a>
+      <a href="../About.html" class="w3-bar-item w3-button">About</a>
+      <a href="../Contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="../Privacy&Terms.html" class="w3-bar-item w3-button">Privacy & Terms</a>
+    </div>
+  </div>
+
+  <!--Animation-->
+  <div class="w3-animate-bottom">
+
+    <!-- Header -->
+    <div class="section0 header">
+      <header class="w3-container w3-theme-lesson0 w3-padding w3-card content" id="myHeader">
+        <div class="w3-center">
+          <br>
+          <img class="w3-hide-small" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:300px; height:auto;"><br class="w3-hide-small">
+          <img class="w3-hide-medium w3-hide-large" src="../../Images/Icon2.png" alt="EZLOGIC Logo" style="max-width:250px; height:auto;"><br
+            class="w3-hide-medium w3-hide-large">
+          <h1 class="w3-xxxlarge w3-hide-small w3-hide-medium"><b>TOPIC 1.1<br>Logical Form and Logical Equivalence</b>
+          </h1>
+          <h3 class="w3-xxlarge w3-hide-small w3-hide-large"><b>TOPIC 1.1<br>Logical Form and Logical Equivalence</b>
+          </h3>
+          <h3 class="w3-xxlarge w3-hide-medium w3-hide-large"><b>1.1 Logical Form and Logical Equivalence</b></h3>
+        </div>
+        <div class="w3-center w3-padding">
+          <a><button disabled class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+          <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+              style="font-weight:500;">Topics</button></a>
+          <a href="./1-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                class="fa fa-angle-right"></i></button></a>
+        </div>
+      </header>
+    </div>
+
+    <!--Topic Proper-->
+    <div class="section02">
+      <div class="w3-theme-lesson0 w3-card content">
+        <br>
+        <!-- Learning objectives (left) and outline (with quick links) (right)-->
+        <div class="w3-container">
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Lesson Objectives</b></h2>
+              <ol>
+                <li>To recognize the central concepts of logic.</li>
+                <li>To properly define statements and their meanings.</li>
+                <li>To construct truth tables and derive equivalent statements.</li>
+                <li>To simplify expressions using logical identities.</li>
+                <li>To determine the logical equivalence between statements.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="w3-half w3-padding">
+            <div class="w3-padding w3-theme-lesson1 w3-border-black w3-border">
+              <h2 class="w3-center"><b>Topic Outline</b></h2>
+              <ol>
+                <li><a href="#Topic1">Introduction to Logic</a></li>
+                <li><a href="#Topic2">Interpreting Statements</a></li>
+                <li><a href="#Topic3">Truth Values</a></li>
+                <li><a href="#Topic4">Logical Equivalence</a></li>
+                <li><a href="#Topic5">De Morgan's Laws</a></li>
+                <li><a href="#Topic6">Tautologies and Contradictions</a></li>
+                <li><a href="#Topic7">Summary of Logical Equivalences</a></li>
+              </ol>
+              <div id="Topic1"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!--Lesson content-->
+        <div class="w3-container">
+          <div class="w3-padding">
+
+            <h2><b>Introduction to Logic</b></h2> <!--Topic 1-->
+            <p>
+              <b class="w3-text-lime">Logic</b> is the science of reasoning.
+              It helps us to understand and reason about different mathematical statements
+              With rules of logic, we would be able to think about mathematical statements and finally,
+              we would be able to prove or disprove those mathematical statements precisely by constructing valid
+              arguments.
+              The rules of mathematical logic specify methods of reasoning mathematical statements.
+              Greek philosopher, <b class="w3-text-lime">Aristotle</b>, was the pioneer of logical reasoning.
+              Logical reasoning provides the theoretical base for many areas of mathematics and consequently computer
+              science.
+              It has many practical applications in <b class="w3-text-lime">computer science</b> like design of
+              computing machines,
+              artificial
+              intelligence, definition of data structures for programming languages, and others.
+            </p>
+            <p>
+              The central concept of deductive logic is the concept of <b class="w3-text-lime">argument form</b>. An
+              argument is a
+              sequence of statements aimed at demonstrating the truth of an assertion. The assertion at
+              the end of the sequence is called the <b class="w3-text-lime">conclusion</b>, and the preceding statements
+              are called
+              <b class="w3-text-lime">premises</b>. To have confidence in the conclusion that you draw from an argument,
+              you must be sure that the premises are acceptable on their own merits or follow from other
+              statements that are known to be true.
+            </p>
+            <p>
+              In logic, the words <i>sentence, true, </i>and <i>false </i>are the initial
+              undefined terms. Furthermore, propositional variables are used to represent parts of the statements.
+            </p>
+
+            <!--Accordition: Example 1 -->
+            <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 1: </b>Represent the form of the argument below using $$p$$ and $$q$$ as premises and $$r$$ for
+              conclusion:<br>
+              If logic is easy or I will study hard, then I will get an A for this course.<br>
+              I will study hard.<br>
+              Therefore, I will get an A for this course.
+            </button>
+            <div id="Demo1" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  The argument form can be represented by the following: <br>
+                  If $$p$$ or $$q$$, then $$r$$. <br>
+                  $$q$$ <br>
+                  Therefore, $$r$$.
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic2"> 
+            <h2><b>Interpreting Statements</b></h2> <!--Topic 2-->
+            <p class="w3-padding w3-lime">
+              A <b>statement</b> (or <b>proposition</b>) is a declarative sentence (a sentence that
+              declares a fact or states an argument) that is either true or false, but not both.
+            </p>
+            <p>
+              For example, “Two plus two equals four” and “Two plus two equals five” are both
+              statements, the first because it is true and the second because it is false. On the other
+              hand, the truth or falsity of “He is a college student” depends on the reference for the
+              pronoun he. For some values of he the sentence is true; for others it is false. If the sentence
+              were preceded by other sentences that made the pronoun’s reference clear, then the
+              sentence would be a statement. Considered on its own, however, the sentence is neither
+              true nor false, and so it is not a statement.
+            </p>
+            <p>
+              Similarly, “x + y > 0” is not a statement because for some values of x and y the
+              sentence is true, whereas for others it is false. For instance, if x = 1 and y = 2, the
+              sentence is true; if x = −1 and y = 0, the sentence is false.
+            </p>
+            <p>
+              To build more complicated logical expressions, three symbols are used. <b class="w3-text-lime">
+                $$\sim$$ denotes NOT, $$\wedge$$ denotes AND, $$\vee$$ denotes OR.</b>
+            </p>
+            <p class="w3-padding w3-lime">
+              Given statements $$p$$ and $$q$$, <br>
+              (1) The sentence $$\sim p$$ is read as "not $$p$$" and is called the <b>negation</b> of $$p$$. This is the
+              symbol that is performed first among the symbole presented earlier. <br>
+              (2) The sentence $$p \wedge q$$ is read as "$$p$$ and $$q$$". $$p \wedge q$$ is called the
+              <b>conjunction</b> of $$p$$ and $$q$$. <br>
+              (2) The sentence $$p \vee q$$ is read as "$$p$$ or $$q$$". $$p \vee q$$ is called the <b>disjunction</b>
+              of $$p$$ and $$q$$. <br>
+            </p>
+            <p>
+              Furthermore, to ease representing of sentences using propositional variables,<br>
+              <b class="w3-text-lime">p but q means p and q</b>, while <b class="w3-text-lime">neither p nor q means ∼p
+                and ∼q</b>.
+            </p>
+            <p>
+              The notation for inequalities involves and and or statements. For instance, if $$x$$, $$a$$, and $$b$$
+              are particular real numbers, then
+              <b class="w3-text-lime">$$x ≤ a$$ means $$x \lt a$$ or $$x=a$$</b>, while <b class="w3-text-lime">$$a ≤ x
+                ≤ b$$ means $$a ≤ x$$ and $$x ≤ b$$.</b>
+            </p>
+
+            <!--Accordition: Example 2a -->
+            <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 2a: </b>Let $$h$$ = "It is hot" and $$s$$ = "It is sunny". Translate the following into
+              symbolic form:<br>
+              (1) It is not hot but it is sunny. <br>
+              (2) It is neither hot nor sunny.
+            </button>
+            <div id="Demo2" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) $$\sim h \wedge s$$ <br>
+                  (2) $$\sim h \wedge \sim s$$ <br>
+                </p>
+              </div>
+            </div>
+            <br>
+
+            <!--Accordition: Example 2b -->
+            <button onclick="myAccFunc('Demo2b')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 2b: </b> Suppose $$x$$ is a particular real number. Let $$p=(0\lt x)$$, $$q=(x\lt 3)$$,
+              $$r=(x=3)$$. Represent the following using propositional variables $$p$$, $$q$$, and $$r$$. <br>
+              (1) $$x \le 3$$ <br>
+              (2) $$0 \lt x \lt 3$$ <br>
+              (3) $$0 \lt x \le 3$$
+            </button>
+            <div id="Demo2b" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) $$q \vee r$$ <br>
+                  (2) $$p \wedge q$$ <br>
+                  (3) $$p \wedge (q \vee r)$$
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic3">
+            <h2><b>Truth Values</b></h2> <!--Topic 3-->
+            <p>
+              Earlier, we built compound sentences out of component statements
+              and the terms not, and, and or. If such sentences are to be statements, however, <b class="w3-text-lime">they
+              must have well-defined truth values—they must be either true or false.</b> We now define
+              such compound sentences as statements by specifying their truth values in terms of the
+              statements that compose them.
+            </p>
+            <ul>
+              <li>
+                If p is a statement variable, the negation of p is “not p” or “It is not the case that
+                p” and is denoted ∼p. It has opposite truth value from p: <b class="w3-text-lime">if p is true, ∼p is false;
+                  if p is false, ∼p is true. </b>
+              </li>
+              <li>
+                If p and q are statement variables, the conjunction of p and q is “p and q,” denoted
+                p ∧ q. It is true when, and only when, both p and q are true. <b class="w3-text-lime">If either p or q is false,
+                  or if both are false, p ∧ q is false. </b>
+              </li>
+              <li>
+                If p and q are statement variables, the disjunction of p and q is “p or q,” denoted
+                p ∨ q. <b class="w3-text-lime">It is true when either p is true, or q is true, or both p and q are true; it is false
+                  only when both p and q are false. </b>
+              </li>
+            </ul>
+            <p>
+              In constructing a <b class="w3-text-lime">truth table</b>, we are considering all the possible combinations of truth values for p and q.
+              Each combination is displayed in one <b class="w3-text-lime">row</b> of the table; the corresponding truth value for the
+              whole statement is placed in the <b class="w3-text-lime">right-most column</b> of that row. In the conjunction between two components,
+              the only row containing a T is the first one since the only way for an and statement to be true is for
+              both component statements to be true. Observe the illustrations below.
+            </p>
+            <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-1a.png">
+            <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+              src="../../Images/Lessons/1-1a.png">
+            <p class="w3-padding w3-lime">
+              A <b>statement form</b> (or propositional form) is an expression made up of statement
+              variables (such as p, q, and r ) and logical connectives (such as ∼,∧, and ∨) that
+              becomes a statement when actual statements are substituted for the component statement
+              variables. The <b>truth table</b> for a given statement form displays the truth values
+              that correspond to all possible combinations of truth values for its component statement
+              variables.
+            </p>
+            <!--Accordition: Example 3 -->
+            <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 3: </b>Construct a truth table for the statement forms below:<br>
+              (1) $$(p \vee q)\wedge \sim(p \wedge q)$$ <br>
+              (2) $$(p \wedge q)\vee \sim r$$
+            </button>
+            <div id="Demo3" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1b.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1b.png"> <br>
+                  (2) <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1c.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1c.png">
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic4">
+            <h2><b>Logical Equivalence</b></h2> <!--Topic 4-->
+            <p>
+              The statements "6 is greater than 2" and "2 is less than 6" are two different ways of saying the same thing.
+              Why? Because of the definition of the phrases greater than and less than. By contrast, although the statements
+              (1) Dogs bark and cats meow and (2) Cats meow and dogs bark
+              are also two different ways of saying the same thing, the reason has nothing to do with
+              the definition of the words. It has to do with the <b class="w3-text-lime">logical form</b> of the
+              statements.
+              Any
+              two statements whose logical forms are related in the same way as (1) and (2) would
+              either both be true or both be false.
+            </p>
+            <p class="w3-padding w3-lime">
+              Two statement forms are called <b>logically equivalent</b> if, and only if, they have identical
+              truth values for each possible substitution of statements for their statement variables.
+              The logical equivalence of statement forms P and Q is denoted by writing P ≡ Q.
+            </p>
+            <p>
+              To test whether two statement forms are logically equivalent,
+            <ol type="1">
+              <li>Construct a truth table with one column for the truth values of P and another
+                column for the truth values of Q.</li>
+              <li>Check each combination of truth values of the statement variables to see whether
+                the truth value of P is the same as the truth value of Q.</li>
+              <ol type="a">
+                <li>If in each row the truth value of P is the same as the truth value of Q, then P
+                  and Q are logically equivalent.</li>
+                <li>If in some row P has a different truth value from Q, then P and Q are not
+                  logically equivalent.</li>
+              </ol>
+            </ol>
+            </p>
+
+            <!--Accordition: Example 4 -->
+            <button onclick="myAccFunc('Demo4')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 4: </b>Show if $$∼(p ∧ q)$$ and $$(∼p ∧ \sim q)$$ are logically equivalent or not.</button>
+            <div id="Demo4" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  <img class="w3-hide-small" style="max-width:80%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-1d.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1d.png">
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic5">
+            <h2><b>De Morgan's Laws</b></h2> <!--Topic 5-->
+            <p>
+              <b class="w3-text-lime">Negation of AND and OR statements:</b> For the statement “John is tall and
+              Jim is redheaded” to be true, both components must
+              be true. So for the statement to be false, one or both components must be false. Thus
+              the negation can be written as “John is not tall or Jim is not redheaded.” In general, the
+              negation of the conjunction of two statements is logically equivalent to the disjunction
+              of their negations. That is, statements of the forms ∼(p ∧ q) and ∼p ∨ ∼q are logically
+              equivalent. Check this using truth tables.
+            </p>
+            <img class="w3-hide-small" style="max-width:90%;position:relative;display:block;margin:auto;" src="../../Images/Lessons/1-1e.png">
+            <img class="w3-hide-medium w3-hide-large" style="max-width:100%;position:relative;display:block;margin:auto;"
+              src="../../Images/Lessons/1-1e.png">
+
+            <p class="w3-lime w3-padding">
+              The <b>negation of an AND statement</b> is logically equivalent to the OR statement in which
+              each component is negated. <br>
+              The <b>negation of an OR statement</b> is logically equivalent to the AND statement in which
+              each component is negated. <br>
+              Symbolically, <b>$$∼(p ∧ q) ≡ ∼p ∨ ∼q$$</b> , and <b>$$∼(p ∨ q) ≡ ∼p ∧ ∼q$$</b>.
+            </p>
+
+            <!--Accordition: Example 5 -->
+            <button onclick="myAccFunc('Demo5')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 5: </b>Write the negations of the following:<br>
+              (1) John is 6 feet tall and weighs at least 200 pounds. <br>
+              (2) $$-1 \lt x \le 4$$
+            </button>
+            <div id="Demo5" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) John is not 6 feet tall or he weighs less than 200 pounds. <br>
+                  (2) $$-1\ge x$$ or $$x\gt 4$$
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic6">
+            <h2><b>Tautologies and Contradictions</b></h2> <!--Topic 6-->
+            <p>
+              It has been said that all of mathematics reduces to tautologies. Although this is formally
+              true, most working mathematicians think of their subject as having substance as well as
+              form. Nonetheless, an intuitive grasp of basic logical tautologies is part of the equipment
+              of anyone who reasons with mathematics.
+            </p>
+            <p class="w3-padding w3-lime">
+              A <b>tautology</b> is a statement form that is always true regardless of the truth values of
+              the individual statements substituted for its statement variables. A statement whose
+              form is a tautology is a <b>tautological statement</b>. <br>
+              A <b>contradication </b> is a statement form that is always false regardless of the truth values
+              of the individual statements substituted for its statement variables. A statement
+              whose form is a contradication is a <b>contradictory statement</b>.
+            </p>
+            <p>
+              According to the definitions, the truth of a tautological statement and the falsity of a
+              contradictory statement are due to the <b class="w3-text-lime">logical structure</b> of the statements themselves and
+              are independent of the meanings of the statements.
+            </p>
+            <div id="LogicalEquivalence"></div> <!--Landing area from Topic 2.2-->
+
+            <!--Accordition: Example 6 -->
+            <button onclick="myAccFunc('Demo6')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 6: </b>
+              (1) Show that the statement form $$p ∨ ∼p$$ is a tautology and that the statement form $$p ∧ ∼p$$
+              is a contradiction.
+              (2) If $$t$$ is a tautology and $$c$$ is a contradiction, show that $$p ∧ t ≡ p$$ and $$p ∧ c ≡ c$$.
+            </button>
+            <div id="Demo6" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  (1) <img class="w3-hide-small" style="max-width:50%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1f.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:90%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1f.png"> <br>
+                  (2) <img class="w3-hide-small" style="max-width:50%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1g.png">
+                  <img class="w3-hide-medium w3-hide-large" style="max-width:90%;position:relative;display:block;margin:auto;"
+                    src="../../Images/Lessons/1-1g.png">
+                </p>
+              </div>
+            </div>
+
+            <br id="Topic7">
+            <h2><b>Summary of Logical Equivalences</b></h2> <!--Topic 7-->
+            <div class="w3-padding w3-lime">
+              Given any statement variables $$p$$, $$q$$, and $$r$$ , a tautology $$t$$ and a contradiction $$c$$, the
+              following logical
+              equivalences hold.
+              <ol type="1">
+                <li>Commutative laws: &nbsp; &nbsp;                          $$p ∧ q ≡ q ∧p$$ &nbsp; &nbsp; $$p∨ q ≡ q ∨ p$$</li>
+                <li>Associative laws: &nbsp; &nbsp; &nbsp;                   $$(p ∧ q) ∧ r ≡ p ∧ (q ∧ r)$$ &nbsp; &nbsp; $$(p ∨ q) ∨ r ≡ p ∨ (q ∨ r )$$</li>
+                <li>Distributive laws: &nbsp; &nbsp; &nbsp;                  $$p ∧ (q ∨ r ) ≡ (p ∧ q) ∨ (p ∧ r )$$ &nbsp; &nbsp; $$p ∨ (q ∧ r ) ≡ (p ∨ q) ∧ (p ∨ r)$$</li>
+                <li>Identity laws: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $$p ∧ t ≡p$$ &nbsp; &nbsp; $$p∨ c ≡ p$$</li>
+                <li>Negation laws: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;        $$p ∨ ∼p ≡ t$$ &nbsp; &nbsp; $$p ∧ ∼p ≡ c$$</li>
+                <li>Double negation law:&nbsp;                               $$∼(∼p) ≡ p$$</li>
+                <li>Idempotent laws: &nbsp; &nbsp; &nbsp;                    $$p ∧ p ≡p$$ &nbsp; &nbsp; $$p∨ p ≡ p$$</li>
+                <li>Universal bound laws:                                    $$p ∨ t ≡ t$$ &nbsp; &nbsp; $$p ∧ c ≡ c$$</li>
+                <li>De Morgan's laws:&nbsp; &nbsp; &nbsp;                    $$∼(p ∧ q) ≡ ∼p ∨ ∼q$$ &nbsp; &nbsp; $$∼(p ∨ q) ≡ ∼p ∧ ∼q$$</li>
+                <li>Absorption laws: &nbsp; &nbsp; &nbsp; &nbsp;             $$p ∨ (p ∧ q) ≡p$$ &nbsp; &nbsp; $$p∧ (p ∨ q) ≡ p$$</li>
+                <li>Negations of $$t$$ and $$c$$:&nbsp;                      $$∼t ≡ c$$ &nbsp; &nbsp; &nbsp; $$∼c ≡ t$$</li>
+              </ol>
+            </div>
+            <br>
+            <!--Accordition: Example 7-->
+            <button onclick="myAccFunc('Demo7')" class="w3-padding-16 w3-button w3-border w3-block w3-left-align w3-theme-example">
+              <b>Example 7: </b>Use the identities presented above to verify the logical Equivalence $$∼(∼p ∧ q) ∧
+              (p ∨
+              q) ≡ p$$ .</button>
+            <div id="Demo7" class="w3-theme-lesson2 w3-hide">
+              <div class="w3-container">
+                <p class="w3-left">
+                  $$∼(∼p ∧ q) ∧ (p ∨ q)$$ <br>
+                  $$≡(∼(∼p)∨ ∼q) ∧ (p ∨ q)$$ by De Morgan's laws <br>
+                  $$≡ (p∨ ∼q) ∧ (p ∨ q)$$ by the double negation law <br>
+                  $$≡ p ∨ (q∧ ∼q)$$ by the distributive law <br>
+                  $$≡ p ∨ F$$ by the negation law <br>
+                  $$≡ p$$ by the identity law.
+                </p>
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <div class="w3-center">
+              <button class="w3-btn w3-large w3-theme-quizbutton w3-hover-white w3-round-large w3-centered w3-card"
+                onclick="document.getElementById('quiz1').style.display='block'" style="font-weight:500;"><b>Go To
+                  Quiz</b></button>
+              <br><br>
+              <a><button disabled class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;"><i
+                    class="fa fa-angle-left"></i>&nbsp; Prev</button></a>
+              <a href="../Lessons.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card"
+                  style="font-weight:500;">Topics</button></a>
+              <a href="./1-2.html"><button class="w3-btn w3-theme-base w3-hover-white w3-round-large w3-card" style="font-weight:500;">Next &nbsp;<i
+                    class="fa fa-angle-right"></i></button></a>
+              <br><br>
+              <p>Questions or clarifications on this topic?
+                <a href="../Contact.html" class="w3-hover-black w3-blue-gray">Click here</a> to place your feedback.
+                Your messgages will be highly appreciated.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!--End animation scope-->
+    </div>
+
+    <!-- Modal for quiz taking: Quiz 1-->
+    <div id="quiz1" class="w3-modal" style="display: none;">
+      <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-theme">
+          <span onclick="document.getElementById('quiz1').style.display='none'" class="w3-button w3-display-topright">×</span>
+          <h4><b>Proceed to quiz?</b></h4>
+        </header>
+        <div class="w3-padding w3-center">
+          <p>You are about to take the following quiz:</p>
+          <h5 class="w3-center"><b>1.1 Logical Form and Logical Equivalence</b></h5>
+          <p>Make sure you are all set for the quiz, and then click the button below.</p>
+          <a href="./1-1Quiz.html"><button class="w3-btn w3-large w3-theme-dark w3-hover-white w3-round-large" style="font-weight:500;"><b>Take the
+                Quiz</b></button></a>
+        </div>
+        <footer class="w3-container w3-theme">
+          <p>Note: Quizzes are for practice only and they do not serve any official purpose.</p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-32 w3-theme-base w3-center" style="margin-top:70px">
+      <h4>Follow Us on</h4>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+      <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+      <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+      <p>
+        <a href="../../index.html">Home</a> | <a href="../Lessons.html">Lessons</a> | <a href="../About.html">About</a> | <a href="../Contact.html">Contact</a> | <a href="../Privacy&Terms.html">Privacy & Terms</a>
+      </p>
+      <p>&#169; 2020 EZ Tutorials. All rights reserved. For educational and personal purposes only.</p>
+      <p>No information from this webpage shall be copied, reproduced, or sold without any prior permission.</p>
+
+      <div class="w3-tooltip w3-right">
+        <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+        <a class="w3-button w3-theme" href="#"><span class="w3-xlarge">
+            <i class="fa fa-chevron-circle-up"></i></span></a>
+      </div>
+    </footer>
+
+    <script>
+      // Used to toggle the menu on smaller screens when clicking on the menu button
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Accordions
+      function myAccFunc(id) {
+        var y = document.getElementById(id);
+        if (y.className.indexOf("w3-show") == -1) {
+          y.className += " w3-show";
+        } else {
+          y.className = y.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+
+</body>
+
+</html>
